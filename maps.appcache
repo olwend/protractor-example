@@ -1,0 +1,52 @@
+CACHE MANIFEST
+#browser will only reload files if this cache file has changed in any way, including comments
+#version 1.1
+
+CACHE:
+    images/britain-maps/full/britain.jpg
+    images/britain-maps/medium/britain.jpg
+    images/britain-maps/medium/legend.jpg
+
+    images/county-maps/full/berkshire.jpg
+    images/county-maps/full/cumberland.jpg
+    images/county-maps/full/gloucestershire.jpg
+    images/county-maps/full/huntingdonshire.jpg
+    images/county-maps/full/leicestershire.jpg
+    images/county-maps/full/nottinghamshire.jpg
+    images/county-maps/full/oxfordshire.jpg
+    images/county-maps/full/rutlandshire.jpg
+    images/county-maps/full/suffolk.jpg
+    images/county-maps/full/westmoreland.jpg
+    images/county-maps/full/wiltshire.jpg
+    images/county-maps/full/yorkshire.jpg
+
+    images/county-maps/medium/berkshire.jpg
+    images/county-maps/medium/cumberland.jpg
+    images/county-maps/medium/gloucestershire.jpg
+    images/county-maps/medium/huntingdonshire.jpg
+    images/county-maps/medium/leicestershire.jpg
+    images/county-maps/medium/nottinghamshire.jpg
+    images/county-maps/medium/oxfordshire.jpg
+    images/county-maps/medium/rutlandshire.jpg
+    images/county-maps/medium/suffolk.jpg
+    images/county-maps/medium/westmoreland.jpg
+    images/county-maps/medium/wiltshire.jpg
+    images/county-maps/medium/yorkshire.jpg
+
+    images/county-maps/thumbs/berkshire.jpg
+    images/county-maps/thumbs/cumberland.jpg
+    images/county-maps/thumbs/gloucestershire.jpg
+    images/county-maps/thumbs/huntingdonshire.jpg
+    images/county-maps/thumbs/leicestershire.jpg
+    images/county-maps/thumbs/nottinghamshire.jpg
+    images/county-maps/thumbs/oxfordshire.jpg
+    images/county-maps/thumbs/rutlandshire.jpg
+    images/county-maps/thumbs/suffolk.jpg
+    images/county-maps/thumbs/westmoreland.jpg
+    images/county-maps/thumbs/wiltshire.jpg
+    images/county-maps/thumbs/yorkshire.jpg
+
+FALLBACK:
+
+NETWORK:
+*

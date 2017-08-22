@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="myApp" >
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Images of Nature interactive</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/jquery.cropbox.css">
+
+  <script src="libs/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="libs/jquery/jquery.min.js"></script>
+<!-- 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-57477456-8', 'auto');
+    ga('set', 'checkProtocolTask', false);
+    ga('set', 'checkStorageTask', false);
+  </script> -->
+</head>
+
+<body>
+
+<!-- required hook for idle timeout -->
+  <section data-ng-controller="idleCtrl">
+  </section>
+
+  <div id="content" ng-view animation-block></div>
+
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/angular/angular-route.min.js"></script>
+  <script src="libs/angular/angular-animate.min.js"></script>
+  <script src="libs/angular/angular-idle.min.js"></script>
+  <script src="libs/angular/angular-sanitize.min.js"></script>
+  <script src="libs/angular/angular-touch.min.js"></script>
+
+  <script src="libs/jquery/jquery.cropbox.js"></script>
+
+  <script src="libs/vendor/bootstrap.min.js"></script>
+  <script src="libs/vendor/idleTimer.js"></script>
+  <script src="libs/vendor/modal.js"></script>
+
+  <script src="app.js"></script>
+  <script src="imgLoader/imgLoader.js"></script>
+
+  <script src="views/landing/landing.js"></script>
+  <script src="views/screensaver/screensaver.js"></script>
+  <script src="views/animalKingdom/animalKingdom.js"></script>
+  <script src="views/geologyPalaeontology/geologyPalaeontology.js"></script>
+  <script src="views/plantsFungi/plantsFungi.js"></script>
+  <script src="views/bookPreview/bookPreview.js"></script>
+
+</body>
+
+</html>

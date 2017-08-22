@@ -1,0 +1,38 @@
+* {
+  cursor: url(images/1percent.png), none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* disable image drag */
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+body {
+  width: 1920px;
+  height: 1200px;
+  overflow: hidden;
+  background-color: $background-color;
+  margin: 0;              // PART OF BOOTSTRAP REPLACEMENT
+}
+
+button:hover, button:active {
+  cursor: none;
+}
+
+div {                     // PART OF BOOTSTRAP REPLACEMENT
+  display: block;
+}
+
+p {                       // PART OF BOOTSTRAP REPLACEMENT
+  margin: 0 0 10px;
+}
+
+button {                  // PART OF BOOTSTRAP REPLACEMENT
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}

@@ -1,0 +1,81 @@
+.footer  {
+  height: 145px;
+  border-top: 1px dashed grey;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  overflow: hidden;
+
+  h2 {
+    width: 30%;
+    margin: 50px auto 0 auto;
+    height: 60px;
+  }
+
+  #home, .zoom {
+    position: absolute;
+    height: 145px;
+    padding-top: 70px;
+  }
+  #home, .zoom, #button--left, #button--right {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top center;
+    top: 18px;
+    border: none;
+    outline: none;
+  }
+
+  #home {
+    width: 175px;
+    background-image: url("images/main_menu_icon.png");
+    left: 50px;
+  }
+
+  #thumb--wrapper {
+    position: absolute;
+    background-size: 90px 75px;
+    right: 50px;
+    height: 145px;
+    top: 18px;
+    border: none;
+    outline: none;
+  }
+
+  #button--left, #button--right {
+    top: 0;
+    padding-top: 88px;
+    width: 175px;
+    background-size: 40px 70px;
+  }
+
+  #button--left {
+    background-image: url("../css/images/left-arrow.png");
+  }
+
+  #button--right {
+    background-image: url("../css/images/right-arrow.png");
+  }
+
+  .zoom  {
+    background-size: 90px 75px;
+    right: 50px;
+  }
+
+  #zoomOut {
+    background-image: url("images/zoom_out_icon.png");
+    width: 200px;
+  }
+
+  #zoom-text {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top left;
+    background-image: url("images/drag_icon.png");
+    padding-top: 20px;
+    width: 23%;
+    margin: 30px auto 0 auto;
+    height: 69px;
+  }
+}

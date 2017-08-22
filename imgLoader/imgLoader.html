@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="imgLoader">
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        Preloading Images In AngularJS With Promises
+    </title>
+</head>
+
+<body ng-controller="AppController">
+<h1>
+    Preloading Images In AngularJS With Promises
+</h1>
+
+<div ng-switch="isLoading">
+
+    <!-- BEGIN: Loading View. -->
+
+    <p ng-switch-when="true">
+        Your images are being loaded... {{ percentLoaded }}%
+    </p>
+
+    <!-- END: Loading View. -->
+
+    <!-- BEGIN: Results View. -->
+
+    <div ng-switch-when="false" ng-switch="isSuccessful">
+        <p ng-switch-when="true">
+
+            <img ng-repeat="src in imageLocations" ng-src="{{ src }}"  style="width: 100px ; margin-right: 10px ;" />
+           </p>
+
+        <p ng-switch-when="false">
+            <strong>Oops</strong>: One of your images failed to load :(
+        </p>
+    </div>
+</div>
+
+

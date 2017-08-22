@@ -1,0 +1,13 @@
+<!--
+This is the partial for individual image zoom.
+-->
+
+<div class="cropContainer">
+  <img src="images/bookPreview/full/{{image}}.jpg"  id="zoomImg" cropbox-dir >
+</div>
+
+<div class="footer">
+  <button ng-mousedown="$location.path('/landing')" id="home">Home</button>
+  <h2 id="zoom-text">Drag the image to explore</h2>
+  <button ng-mousedown="zoomOut()" class="zoom" id="zoomOut">Tap here to zoom out</button>
+</div>

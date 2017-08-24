@@ -268,36 +268,169 @@ angular.module('myApp', [
     // responsible for registering DOM listeners as well as updating the DOM
 
     link:  function (scope, element, attrs) {
-      //this fixes it by forcing angular compile for the scope variable, but throws a 'digest already in progress error'
-      //scope.$apply();
 
-      $(element).attr('src', attrs.src);
-      //console.log( $(element).attr('src'));
+    addEventListener('DOMContentLoaded',function(){
+    console.log("what's happening?");
 
-      $(element).cropbox(
-          {
-              width: 1920,
-              height: 1055,
-              showControls: 'never',
-              zoom: 1
-          }, function () {
-              //onload
-              //console.log('cropbox loaded');
-              this.zoom(1);
-              this.update();
-          }
-      );
 
-      //line below was causing a memory leak
-      //var crop = $(element).data('cropbox');
+        var micrio = new Micrio({
+            // Image ID, required
+            id: 'bbiLs',
+            //// Optional settings
+            // HTML element to put the image in, defaults to <body>
+            container: document.getElementById('container'),
+            // Listen to touch and mouse events, defaults to true
+            hookEvents: true,
+            fullScreen: false,
 
-      // this is being called at the start of the transition animation so means the big image is repositioned to it's static position
-      /*
-       scope.$on('$destroy', function() {
-       console.log('removing cropbox instance');
-       crop.remove();
-       });
-       */
+            toolBar: false,
+
+            noLogo: true,
+            // Initializes and draws image on instance creation, defaults to true
+            autoInit: true,
+            // Creates a fully interactive minimap, defaults to false
+            miniMap: false,
+            // How to render the initial view, like CSS background-size
+            // 'cover' or 'contain'. Defaults to 'contain'.
+            initType: 'contain',
+            // Opens the image at a specified view rectangle [x0, y0, x1, y1]
+            startView: [.25,.25,.75,.75],
+
+
+        });
+
+        // The element fires a 'show' event when the initial image is
+        // fully downloaded
+        var element = document.getElementById('container');
+
+        // The Micrio Javascript instance is [element].micrio
+
+
+        element.addEventListener('loaded', function(){
+            console.info('loaded');
+
+        });
+
+
+         element.addEventListener('metadata', function(e) {
+              console.log('got all markers!', e.detail);
+
+            // micrio.markers._container autoscales and moves based on the current viewport
+            micrio.el.appendChild(micrio.markers._container);
+
+            // Loop through the markers
+            for(var i=0;i<micrio.markers.items.length;i++) {
+                var marker = micrio.markers.items[i];
+
+                console.log('Marker data...', marker.json);
+
+                var view = marker.json.view; // the viewport [x1,y1,x2,y2]
+                var width = view[2]-view[0];
+                var height = view[3]-view[1];
+
+                // Make a <div> of the area
+                var _area = document.createElement('div');
+                _area.className = 'area';
+                _area.setAttribute('id', 'area_' +  marker.json.id);
+
+                // Set style pixel values
+                _area.style.width = width * micrio.width + 'px';
+                _area.style.height = height * micrio.height + 'px';
+                _area.style.left = view[0] * micrio.width + 'px';
+                _area.style.top = view[1] * micrio.height + 'px';
+
+                // Put the div inside the markers container which does the rest of the work
+                micrio.markers._container.appendChild(_area);
+            }
+
+        });
+
+
+
+            element.addEventListener('show', function(){
+            console.info('The image is fully loaded for display');
+            //toggle audio off as default is true;
+
+            setTimeout(function(){ micrio.audio.stop(); }, 100);
+
+
+            // Remove the 'loading' class from the body
+            document.body.classList.remove('loading');
+
+        });
+
+
+
+
+        // Catch clicks on markers, and do a custom camera transition
+        element.addEventListener('click', function(e) {
+
+            // If the clicked element isn't a marker, do nothing
+            if(e.target && e.target.marker) {
+                e.stopPropagation();
+                micrio.camera.stop();
+                // The actual JS instance of the marker
+                var marker = e.target.marker;
+                console.info('Clicked a marker!', marker);
+                // The marker json data
+                var json = marker.json;
+                console.info('This is the original marker JSON', json);
+
+                console.info('This is the original marker JSON.view', json.view);
+
+
+
+                marker.open();
+                // Do anything custom here
+                console.info('Clicked a custom marker! The body text is: ', json.body);
+                // Example custom camera transition:
+
+                var offset = (marker.popup.h.clientWidth/micrio.container.clientWidth)/2;
+
+                micrio.camera.flyTo((json.x + offset), json.y, 0.2, 1000);
+
+                document.getElementById("area_" +json.id).classList.toggle('show');
+
+
+                console.log('class:' + event.target.className);
+                //if(event.target.className === 'close fa fa-close');
+                //happy easter
+                if(marker.class === "chicken")
+                {
+                    var chickenTimer = setTimeout(function(){ micrio.audio.start(); }, 5000);
+                }
+
+
+
+
+              }
+
+            else if(event.target.className === 'close fa fa-close') {
+                clearTimeout(chickenTimer);
+                micrio.audio.stop();
+                micrio.camera.flyToFullView(1000);
+
+               var areas=  document.getElementsByClassName("area");
+
+
+                for (var i = 0; i < areas.length; i++) {
+                   areas[i].classList.remove('show');
+                }
+
+
+            }
+
+            else
+            { return; }
+
+
+
+        }, false); // Make the sure event bubbles to capture the click
+
+
+
+
+    });
 
     }
   };

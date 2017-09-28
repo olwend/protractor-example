@@ -269,7 +269,7 @@ angular.module('myApp', [
 
     link:  function (scope, element, attrs) {
 
-    addEventListener('DOMContentLoaded',function(){
+    //addEventListener('DOMContentLoaded',function(){
     console.log("what's happening?");
 
 
@@ -430,7 +430,7 @@ angular.module('myApp', [
 
 
 
-    });
+ //   });
 
     }
   };

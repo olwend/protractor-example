@@ -275,7 +275,7 @@ angular.module('myApp', [
 
         var micrio = new Micrio({
             // Image ID, required
-            id: 'bbiLs',
+            id: micrioid,
             //// Optional settings
             // HTML element to put the image in, defaults to <body>
             container: document.getElementById('container'),

@@ -260,7 +260,7 @@ angular.module('myApp', [
 
 //directives remove the '-' and camelcase the suffix compared to the directive name used in the html (cropbox-dir), nice and obvious...
 //this sets up the cropbox jquery object on the zoom image
-.directive('cropboxDir', function()
+.directive('micrioDir', function()
 {
   return {
     // Restrict it to be an attribute in this case

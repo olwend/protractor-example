@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.screensaver', ['ngRoute', 'idleTimer', 'ngIdle'])
+angular.module('myApp.screensaver', ['ngRoute', 'ngIdle'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/screensaver', {
@@ -14,8 +14,11 @@ angular.module('myApp.screensaver', ['ngRoute', 'idleTimer', 'ngIdle'])
         //ga('set', { userId: ($rootScope.userID + 1) });
         //ga('send', 'event', {'sessionControl': 'start'});
 
-      Idle.unwatch();
+    // Idle.unwatch();
+
+
 
       $scope.$location = $location;  //so html can see the '$location' object
+
 
 }]);

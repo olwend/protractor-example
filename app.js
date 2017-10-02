@@ -260,7 +260,7 @@ angular.module('myApp', [
 
 //directives remove the '-' and camelcase the suffix compared to the directive name used in the html (cropbox-dir), nice and obvious...
 //this sets up the cropbox jquery object on the zoom image
-.directive('cropboxDir', function()
+.directive('micrioDir', function()
 {
   return {
     // Restrict it to be an attribute in this case
@@ -275,7 +275,7 @@ angular.module('myApp', [
 
         var micrio = new Micrio({
             // Image ID, required
-            id: 'bbiLs',
+            id: attrs.micrioid,
             //// Optional settings
             // HTML element to put the image in, defaults to <body>
             container: document.getElementById('container'),
@@ -386,6 +386,7 @@ angular.module('myApp', [
                 // Example custom camera transition:
 
                 var offset = (marker.popup.h.clientWidth/micrio.container.clientWidth)/2;
+
 
                 micrio.camera.flyTo((json.x + offset), json.y, 0.2, 1000);
 

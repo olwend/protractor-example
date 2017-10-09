@@ -30,7 +30,7 @@ angular.module('myApp.landing', ['ngRoute', 'ngAnimate',  'idleTimer', 'ngIdle']
     */
 
     //console.log('controller entered');
-    Idle.watch();
+    // Idle.watch();
     $scope.$location = $location;
     //console.log($animate.enabled());
  }])

@@ -14,7 +14,7 @@ body {
   width: 1920px;
   height: 1200px;
   overflow: hidden;
-  background-color: #e3e5e4;
+  background-color: #000000;
   margin: 0; }
 
 button:hover, button:active {
@@ -98,11 +98,11 @@ h1, h2 {
 /**** LANDING PAGE ****/
 #landing-title, #landing-title p {
   font-size: 22px;
-  color: #4c4d4d; }
+  color: #ffffff; }
 
 .landing-option p {
   font-size: 28px;
-  color: #4c4d4d; }
+  color: #ffffff; }
 
 #landing-title {
   text-align: left; }
@@ -114,7 +114,7 @@ h1, h2 {
     font-weight: lighter; }
 
 .landing-explore {
-  color: #4c4d4d;
+  color: #ffffff;
   font-size: 24px;
   font-weight: bold; }
 
@@ -230,7 +230,7 @@ h1, h2 {
     margin-bottom: 0;
     display: table-cell;
     vertical-align: top;
-    color: #4c4d4d;
+    color: #ffffff;
     padding-right: 30px;
     width: 280px; }
   .images-list-row h2 {
@@ -283,7 +283,7 @@ h1, h2 {
   padding-top: 20px; }
 
 .landing-option p {
-  margin: 20px auto 10px auto; }
+  margin: 20px 50px 10px 50px; }
 
 .landing-flex_container {
   display: -webkit-flex;
@@ -293,13 +293,13 @@ h1, h2 {
 
 #landing-box1 {
   text-align: center;
-  margin-left: 50px;
-  margin-right: 10px; }
+  /*margin-left: 10px;
+  margin-right: 10px;*/
+  margin: 550px 40px 400px 40px; }
 
 #landing-box2 {
   text-align: center;
-  margin-left: 10px;
-  margin-right: 10px; }
+  margin: 550px 40px 400px 40px; }
 
 #landing-box3 {
   text-align: center;
@@ -314,14 +314,14 @@ h1, h2 {
 .landing-explore {
   width: 125px;
   height: 46px;
-  border: 4px solid #4c4d4d;
+  border: 1px solid #ffffff;
   margin: 10px auto 10px auto;
   outline: none;
-  background-color: white; }
+  background-color: black; }
   .landing-explore--book {
     width: 175px;
     background-color: #4c4d4d;
     color: white; }
 
 .landing-option--image {
-  width: 440px; }
+  width: auto; }

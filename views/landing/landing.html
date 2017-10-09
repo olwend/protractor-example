@@ -3,29 +3,32 @@
 <div class="page-container" style="width:100%;height:100%;" >
 
 <div id="landing-header">
-<div id="landing-header--image"><img src="images/landing/isles.svg" alt=""/></div>
+<!-- <div id="landing-header--image"><img src="images/landing/isles.svg" alt=""/></div> -->
 <div id="landing-title">
-<h1>The Art of British<br>Natural History</h1>
+  <div style="text-align:left;">
+    <!-- above line put pics on right and text on left -->
+<h1>Brooklyn Papyrus</h1>
 
-<p>With over 71,000 documented species, the British Isles has a fantastically diverse and distinctive natural history. This remarkable diversity has captured the imagination of many artists, inspiring them to observe and document the Isles&rsquo; geology, flora, and fauna.<br>
+<p align="right">With over 71,000 documented species, the British Isles has a fantastically diverse and distinctive natural history. This remarkable diversity has captured the imagination of many artists, inspiring them to observe and document the Isles&rsquo; geology, flora, and fauna.<br>
 Explore their extraordinary artworks below and take a sneak peek<br>at the book that inspired the display.</p>
 </div>
 </div>
 
+
   <div class="landing-flex_container">
     <div id="landing-box1" class="landing-option">
-      <img ng-mousedown="$location.path('/animalKingdom')" src="images\landing\animalKingdom_landing.jpg" class="landing-option--image" />
+      <img ng-mousedown="$location.path('/animalKingdom')" src="images\landing\animalKingdom_landing.jpg" class="landing-option--image"/>
       <p>Animal kingdom</p>
       <button ng-mousedown="$location.path('/animalKingdom')" class="landing-explore">Explore</button>
     </div>
 
     <div id="landing-box2" class="landing-option">
-      <img ng-mousedown="$location.path('/plantsFungi')" src="images\landing\plantsFungi_landing.jpg" class="landing-option--image" />
+      <img ng-mousedown="$location.path('/plantsFungi')" src="images\landing\plantsFungi_landing.jpg" class="landing-option--image" align="left" />
       <p>Plants and fungi</p>
       <button ng-mousedown="$location.path('/plantsFungi')" class="landing-explore">Explore</button>
     </div>
 
-    <div id="landing-box3" class="landing-option">
+    <!-- <div id="landing-box3" class="landing-option">
       <img ng-mousedown="$location.path('/geologyPalaeontology')" src="images\landing\geologyPalaeontology_landing.jpg" class="landing-option--image" />
       <p>Geology and palaeontology</p>
       <button ng-mousedown="$location.path('/geologyPalaeontology')" class="landing-explore">Explore</button>
@@ -35,7 +38,8 @@ Explore their extraordinary artworks below and take a sneak peek<br>at the book 
       <img ng-mousedown="$location.path('/bookPreview')" src="images\landing\bookPreview_landing.jpg" class="landing-option--image" />
       <p>The Art of British Natural History</p>
       <button ng-mousedown="$location.path('/bookPreview')" class="landing-explore landing-explore--book">Book preview</button>
-    </div>
+    </div> -->
   </div>
+
 
 </div>

@@ -146,7 +146,7 @@ h1, h2 {
 
 .footer {
   height: 145px;
-  border-top: 1px dashed grey;
+  border-top: 1px solid white;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -161,16 +161,23 @@ h1, h2 {
     height: 145px;
     padding-top: 70px; }
   .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;
     background-color: transparent;
     background-position: top center;
     top: 18px;
     border: none;
-    outline: none; }
+    outline: none; }*/
+    width: 125px;
+    height: 46px;
+    border: 1px solid #ffffff;
+    margin: 10px auto 10px auto;
+    outline: none;
+    background-color: black; }
   .footer #home {
     width: 175px;
-    background-image: url("images/main_menu_icon.png");
+    /*background-image: url("images/main_menu_icon.png");*/
     left: 50px; }
+
   .footer #thumb--wrapper {
     position: absolute;
     background-size: 90px 75px;
@@ -183,11 +190,11 @@ h1, h2 {
     top: 0;
     padding-top: 88px;
     width: 175px;
-    background-size: 40px 70px; }
+    background-size: 40px 70px; }*/
   .footer #button--left {
     background-image: url("../css/images/left-arrow.png"); }
   .footer #button--right {
-    background-image: url("../css/images/right-arrow.png"); }
+    /*background-image: url("../css/images/right-arrow.png"); }*/
   .footer .zoom {
     background-size: 90px 75px;
     right: 50px; }
@@ -244,12 +251,12 @@ h1, h2 {
   margin: 0 0 20px 0; }
 
 #images-list-text {
-  float: right;
+  /*float: right;
   margin: 50px 0 0 0;
   width: 565px;
   height: 300px;
   border-top: 1px dashed grey;
-  border-bottom: 1px dashed grey; }
+  border-bottom: 1px dashed grey; }*/
   #images-list-text h2 {
     margin: 15px 0 10px 0 !important; }
   #images-list-text p {
@@ -297,7 +304,7 @@ h1, h2 {
   margin-right: 10px;*/
   margin: 550px 40px 400px 40px; }
 
-#landing-box2 {
+#.footer {
   text-align: center;
   margin: 550px 40px 400px 40px; }
 

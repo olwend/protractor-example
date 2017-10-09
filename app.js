@@ -351,7 +351,7 @@ angular.module('myApp', [
             console.info('The image is fully loaded for display');
             //toggle audio off as default is true;
 
-            setTimeout(function(){ micrio.audio.stop(); }, 100);
+            setTimeout(function(){ micrio.audio.stop(); }, 100000000);
 
 
             // Remove the 'loading' class from the body

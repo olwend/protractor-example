@@ -14,7 +14,7 @@ body {
   width: 1920px;
   height: 1200px;
   overflow: hidden;
-  background-color: #000000;
+  /*background-color: #000000;*/
   margin: 0; }
 
 button:hover, button:active {
@@ -29,7 +29,8 @@ p {
 button {
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit; }
+  line-height: inherit;
+  background-color: black; }
 
 /****** CONTENTS ******/
 /**********************/
@@ -97,24 +98,26 @@ h1, h2 {
 
 /**** LANDING PAGE ****/
 #landing-title, #landing-title p {
-  font-size: 22px;
-  color: #ffffff; }
+  font-size: 45px;
+  color: #f6f6f6;
+  padding: 100px 20px 20px 20px; }
 
-.landing-option p {
+.flex-item p {
   font-size: 28px;
-  color: #ffffff; }
+  color: #f6f6f6; }
 
 #landing-title {
   text-align: left; }
   #landing-title h1 {
-    font-size: 58px; }
+    font-size: 75px;
+    /*padding: 20px 20px 20px 20px; }*/
   #landing-title span {
     font-size: 40px;
     text-transform: uppercase;
     font-weight: lighter; }
 
 .landing-explore {
-  color: #ffffff;
+  color: #f6f6f6;
   font-size: 24px;
   font-weight: bold; }
 
@@ -169,7 +172,7 @@ h1, h2 {
     outline: none; }*/
     width: 125px;
     height: 46px;
-    border: 1px solid #ffffff;
+    border: 1px solid #f6f6f6;
     margin: 10px auto 10px auto;
     outline: none;
     background-color: black; }
@@ -289,26 +292,29 @@ h1, h2 {
 #landing-title p {
   padding-top: 20px; }
 
-.landing-option p {
+.flex-item p {
   margin: 20px 50px 10px 50px; }
 
 .landing-flex_container {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row; }
+  -webkit-flex-direction: column;
+  flex-direction: column; }
 
 #landing-box1 {
-  text-align: center;
+  /*text-align: center;*/
   /*margin-left: 10px;
   margin-right: 10px;*/
-  margin: 550px 40px 400px 40px; }
+  position:absolute;
+    top:10px;
+    right: 10px; }
+  /*margin: 550px 40px 400px 40px; }*/
 
 #.footer {
   text-align: center;
   margin: 550px 40px 400px 40px; }
 
-#landing-box3 {
+#landing-box2 {
   text-align: center;
   margin-left: 10px;
   margin-right: 10px; }
@@ -321,7 +327,7 @@ h1, h2 {
 .landing-explore {
   width: 125px;
   height: 46px;
-  border: 1px solid #ffffff;
+  border: 1px solid #f6f6f6;
   margin: 10px auto 10px auto;
   outline: none;
   background-color: black; }
@@ -330,5 +336,6 @@ h1, h2 {
     background-color: #4c4d4d;
     color: white; }
 
-.landing-option--image {
-  width: auto; }
+.flex-item {
+  width: auto;
+}

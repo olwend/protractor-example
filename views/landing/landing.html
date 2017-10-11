@@ -1,11 +1,32 @@
-<!-- REMOVE NG-SWIPE ATTRIBUTES -->
-<!--ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()" -->
+<body>
+<flex-container-1><!-- main container -->
+
+  <div class="flex-item">
+    <h1>Brooklyn Papyrus</h1>
+
+    <p>The Brooklyn papyrus is one of the several medical papyri that have survived from ancient Egypt.<br>
+    Dated to around 600 BC, it is one of the earliest examples of recorded snakebit treatment.</p>
+  </div>
+
+    <flex-container-2>
+
+            <img ng-mousedown="$location.path('/animalKingdom')" src="images\landing\animalKingdom_landing.jpg" class="flex-item"/>
+
+          <img ng-mousedown="$location.path('/plantsFungi')" src="images\landing\plantsFungi_landing.jpg" class="flex-item"/>
+
+    </flex-container-2><!-- close nested container -->
+
+</flex-container-1>
+
+</body>
+
+
+
+
+<!--
 <body>
 
 <div class="page-container" style="width:100%;height:100%;" >
-
-<!-- <div id="landing-header"> -->
-<!-- <div id="landing-header--image"><img src="images/landing/isles.svg" alt=""/></div> -->
 
   <div class="landing-flex_container">
     <style>
@@ -16,25 +37,22 @@
         flex-direction: column;
         -webkit-align-items: flex-end;
    align-items: flex-end;
-        /*width: 650px;
-        height: 200px;*/
       }
 </style>
 
 
-      <img ng-mousedown="$location.path('/animalKingdom')" src="images\landing\animalKingdom_landing.jpg" class="flex-item" align="right"/>
-      <!-- <p>Animal kingdom</p>
-      <button ng-mousedown="$location.path('/animalKingdom')" class="landing-explore">Explore</button> -->
+      <img ng-mousedown="$location.path('/animalKingdom')" src="images\landing\animalKingdom_landing.jpg" class="flex-item"/>
+      <style>
+      .flex-item {
+          padding: 38px 200px 70px 0px;
+      }
+      </style>
 
-        <!-- <div style="text-align:left;"> -->
-          <!-- above line put pics on right and text on left -->
 
       <img ng-mousedown="$location.path('/plantsFungi')" src="images\landing\plantsFungi_landing.jpg" class="flex-item"/>
-      <!-- <p>Plants and fungi</p>
-      <button ng-mousedown="$location.path('/plantsFungi')" class="landing-explore">Explore</button> -->
+
 
     </div>
-  </div>
 
 
 
@@ -51,9 +69,8 @@
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+  color: white;
     }
     </style>
 
-    </div>
-</div>
-</body>
+</body> -->

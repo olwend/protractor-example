@@ -66,11 +66,33 @@ button {
   body {
     font-family: 'ingridregular'; }
 
-  h1, h2, p {
+  h1 {
     font-family: inherit;
+    font-size: 80px;
     font-weight: 500;
     line-height: 1.1;
     color: white; }
+
+    h2 {
+      font-family: inherit;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.1;
+      color: white; }
+
+    h3  {
+       font-family: inherit;
+       font-size: 40px;
+       font-weight: 1000;
+       line-height: 1.1;
+       color: white; }
+
+      h4 {
+        font-family: inherit;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: white; }
 
 /**** FOOTER ****/
 .footer h2 {
@@ -104,19 +126,23 @@ button {
       display: flex;                   /* establish flex container */
       flex-direction: row;             /* flex items will align horizontally */
       justify-content: center;         /* center flex items horizontally */
-      align-items: center;             /* center flex items vertically */
+      align-items: center;
+      padding-left: 150px;           /* center flex items vertically */
 
       /* for demo purposes only */
-      height: 1185px;
-      width: 1910px;
+      height: 1200px;
+      width: 1920px;
       border: 1px solid #777;
       background-color: black;
+      /*padding: 200px;*/
   }
 
 flex-container-1 > flex-item {
     height: 90%;
     flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
-    margin-right: 8px;             /* a bit of space between the centered items */
+    margin-right: 8px;
+    width: 50%
+    /*width: 50px;             /* a bit of space between the centered items */*/
 }
 
 flex-container-2 {
@@ -125,7 +151,8 @@ flex-container-2 {
     display: flex;                   /* flex item is now also flex container */
     flex-direction: column;          /* items will stack vertically */
     justify-content: space-between;
-    padding-left: 270px;  /* align items vertically */
+    padding-left: 270px;
+    padding-right: 150px;  /* align items vertically */
 }
 
 flex-container-2 > flex-item {

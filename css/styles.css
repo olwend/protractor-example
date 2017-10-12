@@ -13,7 +13,7 @@
 
 body {
   width: 1920px;
-  height: 1200px;
+  height: 1080px;
   overflow: hidden;
   /*background-color: #000000;*/
   margin: 0; }
@@ -68,28 +68,28 @@ button {
 
   h1 {
     font-family: inherit;
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 500;
     line-height: 1.1;
     color: white; }
 
     h2 {
       font-family: inherit;
-      font-size: 40px;
+      font-size: 25px;
       font-weight: 500;
       line-height: 1.1;
       color: white; }
 
     h3  {
        font-family: inherit;
-       font-size: 40px;
+       font-size: 25px;
        font-weight: 1000;
        line-height: 1.1;
        color: white; }
 
       h4 {
         font-family: inherit;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 1.1;
         color: white; }
@@ -130,7 +130,7 @@ button {
       padding-left: 150px;           /* center flex items vertically */
 
       /* for demo purposes only */
-      height: 1200px;
+      height: 1080px;
       width: 1920px;
       border: 1px solid #777;
       background-color: black;
@@ -151,7 +151,7 @@ flex-container-2 {
     display: flex;                   /* flex item is now also flex container */
     flex-direction: column;          /* items will stack vertically */
     justify-content: space-between;
-    padding-left: 270px;
+    padding-left: 350px;
     padding-right: 150px;  /* align items vertically */
 }
 
@@ -160,3 +160,147 @@ flex-container-2 > flex-item {
     border: 1px dashed #333;
     background-color: yellow;
 }
+
+
+
+flex-container-3 {
+    display: flex;                   /* establish flex container */
+    flex-direction: row;             /* flex items will align horizontally */
+    justify-content: start;         /* center flex items horizontally */
+    align-items: center;
+    padding-left: 6=150px;           /* center flex items vertically */
+
+    /* for demo purposes only */
+    height: 1200px;
+    width: 1920px;
+    border: 1px solid #777;
+    background-color: black;
+    /*padding: 200px;*/
+}
+
+flex-container-3 > flex-item {
+  height: 90%;
+  flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
+  margin-right: 8px;
+  width: 50%
+  /*width: 50px;             /* a bit of space between the centered items */*/
+}
+
+flex-container-4 {
+  height: 95%;
+  flex: -1 0 35%;
+  display: flex;                   /* flex item is now also flex container */
+  flex-direction: column;          /* items will stack vertically */
+  justify-content: space-between;
+  padding-left: 758px;
+  padding-right: 128px;  /* align items vertically */
+}
+
+flex-container-4 > flex-item {
+  flex: 0.5 0 22%;
+  border: 1px dashed #333;
+  background-color: yellow;
+}
+
+
+/* TRANSITIONS */
+#content.ng-enter, #content.ng-leave {
+  transition: 0.7s ease-in-out all;
+  transition-delay: 0.2s; }
+
+#content.ng-leave.ng-leave-active, #content.ng-enter {
+  opacity: 0; }
+
+#content.ng-enter.ng-enter-active, #content.ng-leave {
+  opacity: 1; }
+
+.cropContainer {
+  width: 1920px;
+  height: 1200px;
+  position: absolute; }
+  .cropContainer, .cropContainer .cropFrame, .cropContainer .cropFrame img {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+.footer {
+  height: 122px;
+  border-top: 2px solid white;
+  width: 1920px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  overflow: hidden; }
+  .footer h2 {
+    width: 30%;
+    margin: 50px auto 0 auto;
+    height: 60px; }
+  .footer #home, .footer .zoom {
+    position: absolute;
+    /*height: 145px;*/
+    ?padding-top: 70px; }
+  .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
+    /*background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top center;
+    top: 18px;
+    border: none;
+    outline: none; }*/
+    width: 125px;
+    height: 46px;
+    border: 2px solid #f6f6f6;
+    margin: 10px auto 10px auto;
+    outline: none;
+    background-color: black;
+font-family: inherit;
+color: white;
+   }
+  .footer #home {
+    width: 100px;
+    left: 120px;
+    top: 18px;
+  }
+
+  .footer #thumb--wrapper {
+    position: absolute;
+    background-size: 90px 75px;
+    right: 120px;
+    height: 145px;
+    top: 18px;
+    border: none;
+    outline: none; }
+
+    .divider {
+        width: 50px;
+        height: auto;
+        display: inline-block;
+    }
+
+  .footer #button--left{
+    white-space: nowrap;
+   text align: center;
+    width: 255px;
+    background-size: 40px 70px;
+    }
+
+  .footer #button--right {
+    /*top: 0;
+    padding-top: 50px;*/
+    width: 145px;
+    background-size: 40px 70px;
+   }
+
+    /*background-image: url("../css/images/right-arrow.png"); }*/
+  /*.footer .zoom {
+    background-size: 90px 75px;
+    right: 50px; }
+  .footer #zoomOut {
+    background-image: url("images/zoom_out_icon.png");
+    width: 200px; }
+  .footer #zoom-text {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top left;
+    background-image: url("images/drag_icon.png");
+    padding-top: 20px;
+    width: 23%;
+    margin: 30px auto 0 auto;
+    height: 69px; }*/

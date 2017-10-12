@@ -146,13 +146,13 @@ flex-container-1 > flex-item {
 }
 
 flex-container-2 {
-    height: 77%;
+    height: 88%;
     flex: -1 0 35%;
     display: flex;                   /* flex item is now also flex container */
     flex-direction: column;          /* items will stack vertically */
     justify-content: space-between;
     padding-left: 350px;
-    padding-right: 150px;  /* align items vertically */
+    padding-right: 370px;  /* align items vertically */
 }
 
 flex-container-2 > flex-item {
@@ -255,14 +255,14 @@ color: white;
    }
   .footer #home {
     width: 100px;
-    left: 120px;
+    left: 100px;
     top: 18px;
   }
 
   .footer #thumb--wrapper {
     position: absolute;
     background-size: 90px 75px;
-    right: 120px;
+    right: 100px;
     height: 145px;
     top: 18px;
     border: none;

@@ -37,34 +37,18 @@ button {
   /****** CONTENTS ******/
   /**********************/
   @font-face {
-    font-family: 'elysiolight';
-    src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot");
-    src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");
+    font-family: 'gotham-book';
+    src: url("fonts/gotham-book.otf");
+    /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
     font-weight: normal;
-    font-style: normal; }
-
-  @font-face {
-    font-family: 'elysioregular';
-    src: url("fonts/elysio/type_dynamic_-_elysio-webfont.eot");
-    src: url("fonts/elysio/type_dynamic_-_elysio-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio-webfont.svg#elysioregular") format("svg");
-    font-weight: normal;
-    font-style: normal; }
-
-  @font-face {
-    font-family: 'ingridregular';
-    src: url("fonts/ingrid/NHMIngReg.otf") format("truetype");
-    font-weight: normal;
-    font-style: normal; }
-
-  @font-face {
-    font-family: 'ingriditalic';
-    src: url("fonts/ingrid/NHMIngIta.otf") format("truetype");
-    font-weight: normal;
-    font-style: normal; }
+    font-style: normal;
+    }
 
   /**** CORE ****/
   body {
-    font-family: 'ingridregular'; }
+    /*font-family: 'gotham-medium';*/
+    font-family: 'gotham-book';
+   }
 
   h1 {
     font-family: inherit;
@@ -75,24 +59,29 @@ button {
 
     h2 {
       font-family: inherit;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 500;
       line-height: 1.1;
-      color: white; }
+      color: white;
+      padding-top: 15px; }
 
     h3  {
        font-family: inherit;
-       font-size: 25px;
+       font-size: 20px;
        font-weight: 1000;
        line-height: 1.1;
-       color: white; }
+       color: white;
+       padding-top: 15px;
+     }
 
       h4 {
         font-family: inherit;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.1;
-        color: white; }
+        color: #faf9fa;
+        padding-top: 30px;
+       }
 
 /**** FOOTER ****/
 .footer h2 {
@@ -146,12 +135,12 @@ flex-container-1 > flex-item {
 }
 
 flex-container-2 {
-    height: 88%;
+    height: 75%;
     flex: -1 0 35%;
     display: flex;                   /* flex item is now also flex container */
     flex-direction: column;          /* items will stack vertically */
     justify-content: space-between;
-    padding-left: 350px;
+    padding-left: 300px;
     padding-right: 370px;  /* align items vertically */
 }
 
@@ -168,7 +157,7 @@ flex-container-3 {
     flex-direction: row;             /* flex items will align horizontally */
     justify-content: start;         /* center flex items horizontally */
     align-items: center;
-    padding-left: 6=150px;           /* center flex items vertically */
+    padding-left: 120px;           /* center flex items vertically */
 
     /* for demo purposes only */
     height: 1200px;
@@ -182,7 +171,7 @@ flex-container-3 > flex-item {
   height: 90%;
   flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
   margin-right: 8px;
-  width: 50%
+  width: 50%;
   /*width: 50px;             /* a bit of space between the centered items */*/
 }
 
@@ -193,7 +182,7 @@ flex-container-4 {
   flex-direction: column;          /* items will stack vertically */
   justify-content: space-between;
   padding-left: 758px;
-  padding-right: 128px;  /* align items vertically */
+  padding-right: 160px;  /* align items vertically */
 }
 
 flex-container-4 > flex-item {
@@ -224,7 +213,7 @@ flex-container-4 > flex-item {
 .footer {
   height: 122px;
   border-top: 2px solid white;
-  width: 1920px;
+  width: 1720px;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -277,7 +266,7 @@ color: white;
   .footer #button--left{
     white-space: nowrap;
    text align: center;
-    width: 255px;
+    width: 295px;
     background-size: 40px 70px;
     }
 
@@ -287,20 +276,3 @@ color: white;
     width: 145px;
     background-size: 40px 70px;
    }
-
-    /*background-image: url("../css/images/right-arrow.png"); }*/
-  /*.footer .zoom {
-    background-size: 90px 75px;
-    right: 50px; }
-  .footer #zoomOut {
-    background-image: url("images/zoom_out_icon.png");
-    width: 200px; }
-  .footer #zoom-text {
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: top left;
-    background-image: url("images/drag_icon.png");
-    padding-top: 20px;
-    width: 23%;
-    margin: 30px auto 0 auto;
-    height: 69px; }*/

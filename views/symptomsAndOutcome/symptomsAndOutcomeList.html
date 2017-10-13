@@ -1,0 +1,42 @@
+
+
+<div ng-switch="$root.isLoading">
+
+  <div ng-switch-when="true">
+    Images are being loaded... {{ percentLoaded }}%
+  </div>
+
+  <flex-container-3><!-- main container -->
+
+    <img src="images\landing\animalKingdom_landing.jpg" class="flex-item"/>
+
+      <flex-container-4>
+            <div class="flex-item">
+              <h1>Symptoms and outcome</h1>
+
+              <h2>Symptoms described in the papyrus include weakness, quivering, eyes twitching, bleeding and vomiting.
+              There are several different wordings which are used to describe the prognosis.  Some of these simply state whether the patien is going to die.</h2>
+
+                <h3>Select a letter below or on the image to highlight examples of hieroglyphics and read their transition.</h3>
+
+                <h2>A. Symptoms</h2>
+                <h2>B. Outcome</h2>
+              </div>
+
+      </flex-container-4><!-- close nested container -->
+
+      <div class="footer">
+        <button ng-mousedown="$location.path('/landing')" id="home">Home</button>
+        <div id="thumb--wrapper">
+            <button ng-mousedown="$location.path('/animalKingdom')" id="button--left">Symptoms and outcome</button>
+            <div class="divider"/>
+            <button ng-mousedown="$location.path('/geologyPalaeontology')" id="button--right">Treatments</button>
+          </div>
+        </div>
+      </div>
+
+    <div ng-switch-when="false">
+      <strong>Oops</strong>: One of your images failed to load :(
+    </div>
+
+</flex-container-3>

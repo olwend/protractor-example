@@ -1,0 +1,81 @@
+<div ng-switch-when="true">
+  Images are being loaded... {{ percentLoaded }}%
+</div>
+
+<flex-container-3><!-- main container -->
+
+  <img src="images\landing\animalKingdom_landing.jpg" class="flex-item"/>
+
+    <flex-container-4>
+          <div class="flex-item">
+            <h1>Treatments</h1>
+
+            <h2>Magical chants were often used in ancient Egyptian medicine, but the Brooklyn papyrus offers few treatments that require magic.
+        Instead, surgery and herbal remedies are more common.  Some of the herbal ingredients, such as onions, are still used in Western Africa today to treat snakebite.</h2>
+
+              <h3>Select a letter below or on the image to highlight examples of hieroglyphics and read their transition.</h3>
+
+              <h2>A. Surgery</h2>
+              <h2>B. Herbal</h2>
+              <h2>A. Magic</h2>
+              <h2>B. Healers</h2>
+            </div>
+
+    </flex-container-4><!-- close nested container -->
+
+    <div class="footer">
+      <button ng-mousedown="$location.path('/landing')" id="home">Home</button>
+      <div id="thumb--wrapper">
+          <button ng-mousedown="$location.path('/animalKingdom')" id="button--left">Symptoms and outcome</button>
+          <div class="divider"/>
+          <button ng-mousedown="$location.path('/geologyPalaeontology')" id="button--right">Treatments</button>
+        </div>
+      </div>
+    </div>
+
+  <div ng-switch-when="false">
+    <strong>Oops</strong>: One of your images failed to load :(
+  </div>
+
+</flex-container-3>
+
+
+<!-- <div ng-switch="$root.isLoading">
+
+  <div ng-switch-when="true">
+    Images are being loaded... {{ percentLoaded }}%
+  </div>
+
+
+  <div ng-switch-when="false" ng-switch="$root.isSuccessful">
+    <div ng-switch-when="true">
+      <div id="images-list-container">
+          <p><img ng-mousedown="$location.path('/plantsFungi/2.4')" class="image-thumb" src="images/plantsFungi/thumbs/2.4.jpg">
+            Barbara Nicholson (1906–1978)</p>
+
+          <p><img ng-mousedown="$location.path('/plantsFungi/2.10')" class="image-thumb" src="images/plantsFungi/thumbs/2.10.jpg">
+            William Wilson Saunders (1809–1879)</p>
+
+      </div>
+
+      <div id="images-list-text">
+        <h2>Plants and fungi</h2>
+        <p>From wildflower meadows to your own back garden,<br>the floral habitats of Britain are spectacularly diverse.<br>Every plant and fungus holds a significance that natural history artists are eager to capture.</p>
+      </div>
+
+      <div class="footer">
+        <button ng-mousedown="$location.path('/landing')" id="home">Home</button>
+        <h2>Tap an image to explore in more detail</h2>
+        <div id="thumb--wrapper">
+          <button ng-mousedown="$location.path('/animalKingdom')" id="button--left">Previous gallery</button>
+          <button ng-mousedown="$location.path('/geologyPalaeontology')" id="button--right">Next gallery</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div ng-switch-when="false">
+      <strong>Oops</strong>: One of your images failed to load :(
+    </div>
+  </div>
+</div> -->

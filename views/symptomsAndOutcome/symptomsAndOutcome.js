@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.animalKingdom', ['ngRoute', 'idleTimer', 'ngIdle'])
+angular.module('myApp.symptomsAndOutcome', ['ngRoute', 'idleTimer', 'ngIdle'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/symptomsAndOutcome', {

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.plantsFungi', ['ngRoute', 'idleTimer', 'ngIdle'])
+angular.module('myApp.treatments', ['ngRoute', 'idleTimer', 'ngIdle'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/treatments', {

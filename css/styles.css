@@ -44,6 +44,14 @@ button {
     font-style: normal;
     }
 
+    @font-face {
+      font-family: 'gotham-medium';
+      src: url("fonts/gotham-book.otf");
+      /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
+      font-weight: normal;
+      font-style: normal;
+      }
+
   /**** CORE ****/
   body {
     /*font-family: 'gotham-medium';*/
@@ -51,9 +59,9 @@ button {
    }
 
   h1 {
-    font-family: inherit;
+    font-family: gotham-medium;
     font-size: 55px;
-    font-weight: 500;
+    font-weight: 1000;
     line-height: 1.1;
     color: white; }
 
@@ -66,7 +74,7 @@ button {
       padding-top: 14px; }
 
     h3  {
-       font-family: inherit;
+       font-family: gotham-medium;
        font-size: 24px;
        font-weight: 1000;
        line-height: 1.1;
@@ -85,7 +93,8 @@ button {
 
 /**** FOOTER ****/
 .footer h2 {
-  font-size: 32px; }
+  font-size: 32px;
+  font-family: gotham-medium; }
 
 .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
   font-size: 22px; }

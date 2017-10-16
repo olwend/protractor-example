@@ -3,29 +3,29 @@
 angular.module('myApp.animalKingdom', ['ngRoute', 'idleTimer', 'ngIdle'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/animalKingdom', {
-    templateUrl: 'views/animalKingdom/animalKingdomList.html',
-    controller: 'animalKingdomCtrl'
+  $routeProvider.when('/symptomsAndOutcome', {
+    templateUrl: 'views/symptomsAndOutcome/symptomsAndOutcomeList.html',
+    controller: 'symptomsAndOutcomeCtrl'
   })
-  . when('/animalKingdom/:image', {
-    templateUrl: 'views/animalKingdom/animalKingdomFull.html',
-    controller: 'animalKingdomFullCtrl'
+  . when('/symptomsAndOutcome/:image', {
+    templateUrl: 'views/symptomsAndOutcome/symptomsAndOutcomeFull.html',
+    controller: 'symptomsAndOutcomeFullCtrl'
   })
-  .when('/animalKingdom/:image/:zoom', {
-    templateUrl: 'views/animalKingdom/animalKingdomZoom.html',
-    controller: 'animalKingdomZoomCtrl'
+  .when('/symptomsAndOutcome/:image/:zoom', {
+    templateUrl: 'views/symptomsAndOutcome/symptomsAndOutcomeZoom.html',
+    controller: 'symptomsAndOutcomeZoomCtrl'
   });
 }])
 
 
 /** GALLERY PAGE **/
-.controller('animalKingdomCtrl', ['$location', '$scope', 'Idle', function($location, $scope, Idle) {
+.controller('symptomsAndOutcomeCtrl', ['$location', '$scope', 'Idle', function($location, $scope, Idle) {
   Idle.watch();
   $scope.$location = $location;
 }])
 
 /** SINGLE IMAGE FULL **/
-.controller('animalKingdomFullCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
+.controller('symptomsAndOutcomeFullCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
   Idle.watch();
   $scope.$location = $location;
 
@@ -34,7 +34,7 @@ angular.module('myApp.animalKingdom', ['ngRoute', 'idleTimer', 'ngIdle'])
   }
 
   $scope.zoomImage = function() {
-    var imageLink = '/animalKingdom/'+$scope.image+'/zoom';
+    var imageLink = '/symptomsAndOutcome/'+$scope.image+'/zoom';
     $location.path(imageLink);
   }
 
@@ -49,7 +49,7 @@ angular.module('myApp.animalKingdom', ['ngRoute', 'idleTimer', 'ngIdle'])
 }])
 
 /** SINGLE IMAGE ZOOM **/
-.controller('animalKingdomZoomCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
+.controller('symptomsAndOutcomeZoomCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
   Idle.watch();
   $scope.$location = $location;
 

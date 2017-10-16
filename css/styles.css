@@ -52,35 +52,35 @@ button {
 
   h1 {
     font-family: inherit;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: 500;
     line-height: 1.1;
     color: white; }
 
     h2 {
       font-family: inherit;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.1;
       color: white;
-      padding-top: 15px; }
+      padding-top: 14px; }
 
     h3  {
        font-family: inherit;
-       font-size: 20px;
+       font-size: 24px;
        font-weight: 1000;
        line-height: 1.1;
        color: white;
-       padding-top: 15px;
+       padding-top: 14px;
      }
 
       h4 {
         font-family: inherit;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
         line-height: 1.1;
-        color: #faf9fa;
-        padding-top: 30px;
+        color: #dbd8d8;
+        padding-top: 28px;
        }
 
 /**** FOOTER ****/
@@ -140,8 +140,8 @@ flex-container-2 {
     display: flex;                   /* flex item is now also flex container */
     flex-direction: column;          /* items will stack vertically */
     justify-content: space-between;
-    padding-left: 300px;
-    padding-right: 370px;  /* align items vertically */
+    padding-left: 260px;
+    padding-right: 297px;  /* align items vertically */
 }
 
 flex-container-2 > flex-item {
@@ -181,7 +181,7 @@ flex-container-4 {
   display: flex;                   /* flex item is now also flex container */
   flex-direction: column;          /* items will stack vertically */
   justify-content: space-between;
-  padding-left: 758px;
+  padding-left: 630px;
   padding-right: 160px;  /* align items vertically */
 }
 
@@ -234,7 +234,7 @@ flex-container-4 > flex-item {
     border: none;
     outline: none; }*/
     width: 125px;
-    height: 46px;
+    height: 52px;
     border: 2px solid #f6f6f6;
     margin: 10px auto 10px auto;
     outline: none;

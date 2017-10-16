@@ -3,29 +3,29 @@
 angular.module('myApp.plantsFungi', ['ngRoute', 'idleTimer', 'ngIdle'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/plantsFungi', {
-    templateUrl: 'views/plantsFungi/plantsFungiList.html',
-    controller: 'PlantsFungiCtrl'
+  $routeProvider.when('/treatments', {
+    templateUrl: 'views/treatments/treatmentsList.html',
+    controller: 'treatmentsCtrl'
   })
-  . when('/plantsFungi/:image', {
-    templateUrl: 'views/plantsFungi/plantsFungiFull.html',
-    controller: 'PlantsFungiFullCtrl'
+  . when('/treatments/:image', {
+    templateUrl: 'views/treatments/treatmentsFull.html',
+    controller: 'treatmentsFullCtrl'
   })
-  .when('/plantsFungi/:image/:zoom', {
-    templateUrl: 'views/plantsFungi/plantsFungiZoom.html',
-    controller: 'PlantsFungiZoomCtrl'
+  .when('/treatments/:image/:zoom', {
+    templateUrl: 'views/treatments/treatmentsZoom.html',
+    controller: 'treatmentsZoomCtrl'
   });
 }])
 
 
 /** GALLERY PAGE **/
-.controller('PlantsFungiCtrl', ['$location', '$scope', 'Idle', function($location, $scope, Idle) {
+.controller('treatmentsCtrl', ['$location', '$scope', 'Idle', function($location, $scope, Idle) {
   Idle.watch();
   $scope.$location = $location;
 }])
 
 /** SINGLE IMAGE FULL **/
-.controller('PlantsFungiFullCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
+.controller('treatmentsFullCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
   Idle.watch();
   $scope.$location = $location;
 
@@ -34,7 +34,7 @@ angular.module('myApp.plantsFungi', ['ngRoute', 'idleTimer', 'ngIdle'])
   }
 
   $scope.zoomImage = function() {
-    var imageLink = '/plantsFungi/'+$scope.image+'/zoom';
+    var imageLink = '/treatments/'+$scope.image+'/zoom';
     $location.path(imageLink);
   }
 
@@ -49,7 +49,7 @@ angular.module('myApp.plantsFungi', ['ngRoute', 'idleTimer', 'ngIdle'])
 }])
 
 /** SINGLE IMAGE ZOOM **/
-.controller('PlantsFungiZoomCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
+.controller('treatmentsZoomCtrl', ['$location', '$scope', '$route', 'Idle', function($location, $scope, $route, Idle) {
   Idle.watch();
   $scope.$location = $location;
 
@@ -58,7 +58,7 @@ angular.module('myApp.plantsFungi', ['ngRoute', 'idleTimer', 'ngIdle'])
   }
 
   $scope.zoomOut = function() {
-    var imageLink = '/plantsFungi/'+$scope.image;
+    var imageLink = '/treatments/'+$scope.image;
     $location.path(imageLink);
   }
 

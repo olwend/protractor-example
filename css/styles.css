@@ -1,5 +1,7 @@
 
-{
+/*
+
+* {
   cursor: url(images/1percent.png), none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -8,10 +10,14 @@
   -ms-user-select: none;
   user-select: none;
 
-  -webkit-user-drag: none;
-  user-drag: none; }
 
   /* disable image drag */
+
+  /*
+  -webkit-user-drag: none;
+  user-drag: none; }
+  */
+
 
 body {
   width: 1920px;

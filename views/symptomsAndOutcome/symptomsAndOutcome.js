@@ -31,6 +31,11 @@ angular.module('myApp.symptomsAndOutcome', ['ngRoute', 'idleTimer', 'ngIdle'])
      'color': '#ffce42'
      };
  };
+
+ $scope.$on('$destroy', function() {
+   //Idle.unwatch();
+ });
+
 }])
 
 /** SINGLE IMAGE FULL **/

@@ -31,6 +31,11 @@ angular.module('myApp.treatments', ['ngRoute', 'idleTimer', 'ngIdle'])
        'color': '#ffce42'
        };
    };
+
+   $scope.$on('$destroy', function() {
+     //Idle.unwatch();
+   });
+
 }])
 
 /** SINGLE IMAGE FULL **/
@@ -53,7 +58,7 @@ angular.module('myApp.treatments', ['ngRoute', 'idleTimer', 'ngIdle'])
 
   // Not sure this is needed //
   $scope.$on('$destroy', function() {
-    //Idle.unwatch();
+    Idle.unwatch();
   });
 }])
 
@@ -77,6 +82,6 @@ angular.module('myApp.treatments', ['ngRoute', 'idleTimer', 'ngIdle'])
 
   // Not sure this is needed //
   $scope.$on('$destroy', function() {
-    //Idle.unwatch();
+    Idle.unwatch();
   });
 }])

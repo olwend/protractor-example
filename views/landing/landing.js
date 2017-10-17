@@ -33,4 +33,9 @@ angular.module('myApp.landing', ['ngRoute', 'ngAnimate',  'idleTimer', 'ngIdle']
     Idle.watch();
     $scope.$location = $location;
     //console.log($animate.enabled());
+
+    $scope.$on('$destroy', function() {
+      //Idle.unwatch();
+    });
+
  }])

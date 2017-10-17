@@ -22,6 +22,15 @@ angular.module('myApp.treatments', ['ngRoute', 'idleTimer', 'ngIdle'])
 .controller('treatmentsCtrl', ['$location', '$scope', 'Idle', function($location, $scope, Idle) {
   Idle.watch();
   $scope.$location = $location;
+
+    $scope.color = {
+     'color': '#ffce42'
+   };
+     $scope.chcolor = function() {
+       $scope.color = {
+       'color': '#ffce42'
+       };
+   };
 }])
 
 /** SINGLE IMAGE FULL **/

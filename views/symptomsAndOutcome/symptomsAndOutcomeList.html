@@ -4,7 +4,7 @@
     Images are being loaded... {{ percentLoaded }}%
   </div>
 
-  <flex-container-3><!-- main container -->
+  <flex-container-3>
 
     <img src="images\landing\symptoms-and-outcome.jpg" class="flex-item"/>
 
@@ -21,12 +21,12 @@
                 <h2>B. Outcome</h2>
               </div>
 
-      </flex-container-4><!-- close nested container -->
+      </flex-container-4>
 
       <div class="footer">
         <button ng-mousedown="$location.path('/landing')" id="home">Home</button>
         <div id="thumb--wrapper">
-            <button ng-mousedown="$location.path('/symptomsAndOutcome')" id="button--left">Symptoms and outcome</button>
+            <button ng-mousedown="$location.path('/symptomsAndOutcome')" id="button--left" ng-click="color" ng-style="color">Symptoms and outcome</button>
             <div class="divider"/>
             <button ng-mousedown="$location.path('/treatments')" id="button--right">Treatments</button>
           </div>

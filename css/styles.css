@@ -1,5 +1,5 @@
 
-* {
+{
   cursor: url(images/1percent.png), none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -7,15 +7,17 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* disable image drag */
+
   -webkit-user-drag: none;
   user-drag: none; }
+
+  /* disable image drag */
 
 body {
   width: 1920px;
   height: 1080px;
   overflow: hidden;
-  /*background-color: #000000;*/
+  background-color: #000000;
   margin: 0; }
 
 button:hover, button:active {
@@ -172,13 +174,13 @@ flex-container-3 {
     padding-left: 120px;           /* center flex items vertically */
 
     /* for demo purposes only */
-    height: 1200px;
+    height: 1080px;
     width: 1920px;
     border: 1px solid #777;
     background-color: black;
     /*padding: 200px;*/
 }
-
+m
 flex-container-3 > flex-item {
   height: 90%;
   flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
@@ -217,7 +219,7 @@ flex-container-4 > flex-item {
 
 .cropContainer {
   width: 1920px;
-  height: 1200px;
+  height: 1080px;
   position: absolute; }
   .cropContainer, .cropContainer .cropFrame, .cropContainer .cropFrame img {
     -webkit-transform: translate3d(0, 0, 0); }
@@ -289,3 +291,21 @@ color: white;
     width: 145px;
     background-size: 40px 70px;
    }
+
+
+   /* TRANSITIONS */
+   #content.ng-enter, #content.ng-leave {
+     transition: 0.7s ease-in-out all;
+     transition-delay: 0.2s; }
+
+   #content.ng-leave.ng-leave-active, #content.ng-enter {
+     opacity: 0; }
+
+   #content.ng-enter.ng-enter-active, #content.ng-leave {
+     opacity: 1; }
+
+     #bossDiv
+     {
+      position: absolute;
+      top: 0;
+     }

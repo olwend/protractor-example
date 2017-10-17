@@ -1,9 +1,6 @@
-<div ng-switch="$root.isLoading">
 
-  <div ng-switch-when="true">
-    Images are being loaded... {{ percentLoaded }}%
-  </div>
 
+<div id="bossDiv">
   <flex-container-3>
 
     <img src="images\landing\symptoms-and-outcome.jpg" class="flex-item"/>
@@ -31,10 +28,6 @@
             <button ng-mousedown="$location.path('/treatments')" id="button--right">Treatments</button>
           </div>
         </div>
-      </div>
-
-    <div ng-switch-when="false">
-      <strong>Oops</strong>: One of your images failed to load :(
-    </div>
 
 </flex-container-3>
+</div>

@@ -193,8 +193,8 @@ flex-container-4 {
   display: flex;                   /* flex item is now also flex container */
   flex-direction: column;          /* items will stack vertically */
   justify-content: space-between;
-  padding-left: 630px;
-  padding-right: 160px;  /* align items vertically */
+  padding-left: 600px;
+  padding-right: 232px;  /* align items vertically */
 }
 
 flex-container-4 > flex-item {

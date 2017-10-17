@@ -65,6 +65,9 @@ button {
     line-height: 1.1;
     color: white; }
 
+  .title {
+      font-size: 35px; }
+
     h2 {
       font-family: inherit;
       font-size: 24px;
@@ -245,7 +248,7 @@ flex-container-4 > flex-item {
     width: 125px;
     height: 52px;
     border: 2px solid #f6f6f6;
-    margin: 10px auto 10px auto;
+    margin: 10px -99px 10px -99px;
     outline: none;
     background-color: black;
 font-family: inherit;
@@ -260,7 +263,7 @@ color: white;
   .footer #thumb--wrapper {
     position: absolute;
     background-size: 90px 75px;
-    right: 100px;
+    right: 72px;
     height: 145px;
     top: 18px;
     border: none;
@@ -277,6 +280,7 @@ color: white;
    text align: center;
     width: 295px;
     background-size: 40px 70px;
+    margin-right: 100px;
     }
 
   .footer #button--right {

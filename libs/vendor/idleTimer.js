@@ -65,7 +65,7 @@ angular.module('idleTimer', ['ngIdle', 'modal', 'ngRoute'])
 
 
  .config(function(IdleProvider, KeepaliveProvider) {
- IdleProvider.idle(1000);
+ IdleProvider.idle(10000);
  IdleProvider.timeout(1);
  //KeepaliveProvider.interval(10);
  });

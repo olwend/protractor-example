@@ -16,6 +16,8 @@
 
   <link rel="stylesheet" href="libs/vendor/micrio-1.2.min.css">
   <script src="libs/vendor/micrio-1.2.min.js"></script>
+
+    <link rel="stylesheet" href="css/micrio-custom.css">
 <!--
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -27,80 +29,6 @@
     ga('set', 'checkStorageTask', false);
   </script> -->
 
-  <style type="text/css">
-            body {
-            /*background-color: black;*/
-        }
-
-        body.loading:before {
-            content: 'Loading...';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%,-50%,0);
-            font-size: 40px;
-            color: #ffffff;
-            /*background-color: black;*/
-        }
-
-
-
-        .micrio-container .marker-popup {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 1);
-            color: #fff;
-            margin: -14px 0 0 24px;
-            cursor: auto;
-            font-size: 16px;
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
-
-        .micrio-container .marker-popup button.close {
-        }
-
-
-        .micrio-container .marker-popup article {
-            padding: 15px;
-            width:auto;
-            max-width: 200px;
-            overflow-y: auto;
-            position: relative;
-            white-space: nowrap;
-        }
-
-
-
-        /* The micrio container element */
-        body micrio.micrio-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        .markers-container .area {
-            position: absolute;
-            outline: 6000px solid #222;
-            opacity: 0;
-            display:none;
-        }
-
-        .markers-container .area.show {
-            opacity: 0.5;
-            display: block;
-        }
-
-        /*
-        .markers-container .area:hover {
-            background: rgba(0,0,0,.5);
-        }
-        */
-  </style>
 </head>
 
 <body>
@@ -125,6 +53,7 @@
   <script src="libs/vendor/modal.js"></script>
 
   <script src="app.js"></script>
+  <script src="micrioDirective.js"></script>
   <script src="imgLoader/imgLoader.js"></script>
 
   <script src="views/landing/landing.js"></script>

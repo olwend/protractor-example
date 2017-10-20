@@ -1,0 +1,146 @@
+
+/* micrio specific */
+
+
+.micrio-container .marker-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
+    margin: -14px 0 0 24px;
+    cursor: auto;
+    font-size: 18px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    min-width: 500px;
+    border: 3px solid yellow;
+    font-family: Arial;
+    font-size: 20px;
+   /*  padding: 20px; */
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0s;
+}
+
+.micrio-container .marker-popup.ready {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1s;
+}
+
+.micrio-container .marker-popup button.close {
+}
+
+.micrio-container .marker-popup article {
+    padding: 15px;
+    width:auto;
+    max-width: 500px;
+    overflow-y: auto;
+    position: relative;
+    white-space: nowrap;
+}
+
+.micrio-container .marker-popup button.close {
+    background-image: url(../images/micrio/close-temp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+.markers-container .area {
+    position: absolute;
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    /* border: 1px solid red;
+   box-shadow: inset 0px 0px 60px 10px rgba(0,0,0,1); */
+
+    display: block;
+    overflow:hidden;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0s;
+}
+
+.markers-container .area.show {
+    opacity: 0.4;
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1s;
+    /* box-shadow: 50px 50px 50px 40px rgba(0,0,0,1.0);*/
+}
+
+
+#filter {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    }
+
+#filter.showA,#filter.showB {
+    opacity: 1;
+    transition-delay: 1.5s;
+  }
+
+
+#filter.showA:before {
+    -webkit-mask-image: url(../images/micrio/mask1-A1-blur.png), -webkit-linear-gradient(white, white);
+    top:0px;
+    right:0px;
+   }
+
+#filter.showB:before {
+    -webkit-mask-image: url(../images/micrio/mask1-B.png), -webkit-linear-gradient(white, white);
+    top:24px;
+    right:0px;
+  }
+
+#filter:before  {
+    -webkit-mask-composite: xor;
+   /*-webkit-mask-position: center center; */
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: auto;
+    background: rgba(0,0,0,0.50);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.fa-remove:before, .fa-close:before, .fa-times:before
+{
+    content: "";
+}
+
+.micrio-container .marker-container.class-default .marker,  .micrio-container .marker-container.class-a-visible .marker,  .micrio-container .marker-container.class-b-visible .marker {
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    /* content: "A"; */
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    font-size: 25px;
+    font-family: arial;
+    transition: all 1s ease-in-out;
+
+}
+
+.marker-container.opened .marker  {
+    background-color: yellow !important;
+}

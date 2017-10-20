@@ -75,32 +75,50 @@ flex-container-3 {
   display: flex;                   /* establish flex container */
   flex-direction: row;             /* flex items will align horizontally */
   justify-content: start;         /* center flex items horizontally */
-  align-items: center;
-  padding-left: 120px;           /* center flex items vertically */
+  // align-items: center;
+  // padding-left: 120px;           /* center flex items vertically */
 
   height: 1080px;
   width: 1920px;
-  border: 1px solid #777;
+  // border: 1px solid #777;
   background-color: black;
            /*padding: 200px;*/
   }
 
-flex-container-3 > flex-item {
-  height: 90%;
-  flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
-  margin-right: 8px;
-  width: 50%;
+flex-container-3 .micrio-container {
+  // height: 90%;
+  width: 1300px;
+  background-color: red;
+  height: 79%;
+  margin: 50px;
+  outline: 1px solid white;
+  // flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
+  // margin-right: 8px;
+  // width: 50%;
          /*width: 50px;             /* a bit of space between the centered items */
   }
 
+  .micrio-container canvas.micrio {
+      background: #000 !important;
+  }
+
+  flex-container-3 > flex-item {
+    height: 90%;
+    flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
+    margin-right: 8px;
+    width: 50%;
+    /*width: 50px;             /* a bit of space between the centered items */
+  }
+
 flex-container-4 {
-  height: 95%;
+  height: 88%;
   flex: -1 0 35%;
   display: flex;                   /* flex item is now also flex container */
   flex-direction: column;          /* items will stack vertically */
   justify-content: space-between;
-  padding-left: 600px;
-  padding-right: 232px;  /* align items vertically */
+  padding-left: 50px;
+  padding-right: 50px;  /* align items vertically */
+  width: 470px;
 }
 
 flex-container-4 > flex-item {

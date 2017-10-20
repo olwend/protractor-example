@@ -22,13 +22,14 @@ flex-container-1 > flex-item {
 }
 
 flex-container-2 {
-  height: 75%;
+  height: 100%;
   flex: -1 0 35%;
   display: flex;                   /* flex item is now also flex container */
   flex-direction: column;          /* items will stack vertically */
   justify-content: space-between;
   padding-left: 260px;
-  padding-right: 297px;  /* align items vertically */
+  padding-right: 297px;
+  padding-top: 111px;  /* align items vertically */
 }
 
 flex-container-2 > flex-item {

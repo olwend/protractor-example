@@ -14,24 +14,17 @@
  }
   .footer #home, .footer .zoom {
     position: absolute;
-    /*height: 145px;*/
     padding-top: 70px;
   }
   .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
-    /*background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: top center;
-    top: 18px;
-    border: none;
-    outline: none; }*/
     width: 125px;
     height: 52px;
     border: 2px solid #f6f6f6;
     margin: 10px -99px 10px -99px;
     outline: none;
     background-color: black;
-font-family: inherit;
-color: white;
+    font-family: inherit;
+    color: white;
    }
   .footer #home {
     width: 100px;
@@ -50,12 +43,12 @@ color: white;
   }
 
     .divider {
-        width: 50px;
-        height: auto;
-        display: inline-block;
+      width: 50px;
+      height: auto;
+      display: inline-block;
     }
 
-  .footer #button--left{
+  .footer #button--left {
     white-space: nowrap;
     text-align: center;
     width: 295px;
@@ -64,8 +57,6 @@ color: white;
     }
 
   .footer #button--right {
-    /*top: 0;
-    padding-top: 50px;*/
     width: 145px;
     background-size: 40px 70px;
    }

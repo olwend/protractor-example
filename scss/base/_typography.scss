@@ -8,60 +8,108 @@
 /**********************/
 
 @font-face {
-  font-family: 'elysiolight';
-  src: url('fonts/elysio/type_dynamic_-_elysio_light-webfont.eot');
-  src: url('fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2') format('woff2'),
-  url('fonts/elysio/type_dynamic_-_elysio_light-webfont.woff') format('woff'),
-  url('fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf') format('truetype'),
-  url('fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight') format('svg');
+  font-family: 'gotham-book';
+  src: url("fonts/gotham-book.otf");
+  /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
   font-weight: normal;
   font-style: normal;
-}
+  }
 
-@font-face {
-  font-family: 'elysioregular';
-  src: url('fonts/elysio/type_dynamic_-_elysio-webfont.eot');
-  src: url('fonts/elysio/type_dynamic_-_elysio-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/elysio/type_dynamic_-_elysio-webfont.woff2') format('woff2'),
-  url('fonts/elysio/type_dynamic_-_elysio-webfont.woff') format('woff'),
-  url('fonts/elysio/type_dynamic_-_elysio-webfont.ttf') format('truetype'),
-  url('fonts/elysio/type_dynamic_-_elysio-webfont.svg#elysioregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ingridregular';
-  src: url('fonts/ingrid/NHMIngReg.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ingriditalic';
-  src: url('fonts/ingrid/NHMIngIta.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'gotham-medium';
+    src: url("fonts/gotham-book.otf");
+    /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
+    font-weight: normal;
+    font-style: normal;
+    }
 
 
 /**** CORE ****/
 
 body {
-  font-family: 'ingridregular';
+  font-family: 'gotham-book';
 }
 
-h1, h2 {                  // PART OF BOOTSTRAP REPLACEMENT
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
+  h1 {
+    font-family: gotham-medium;
+    font-size: 55px;
+    font-weight: 1000;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .title {
+      font-size: 35px;
+    }
+
+    h2 {
+      font-family: inherit;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.1;
+      color: white;
+      padding-top: 14px;
+    }
+
+    h3  {
+       font-family: gotham-medium;
+       font-size: 24px;
+       font-weight: 1000;
+       line-height: 1.1;
+       color: white;
+       padding-top: 14px;
+     }
+
+      h4 {
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: #dbd8d8;
+        padding-top: 28px;
+       }
+
+/**** Flex-Container ****/
+
+flex-container-3 {
+  display: flex;                   /* establish flex container */
+  flex-direction: row;             /* flex items will align horizontally */
+  justify-content: start;         /* center flex items horizontally */
+  align-items: center;
+  padding-left: 120px;           /* center flex items vertically */
+
+  height: 1080px;
+  width: 1920px;
+  border: 1px solid #777;
+  background-color: black;
+           /*padding: 200px;*/
+  }
+
+flex-container-3 > flex-item {
+  height: 90%;
+  flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
+  margin-right: 8px;
+  width: 50%;
+         /*width: 50px;             /* a bit of space between the centered items */
+  }
+
+flex-container-4 {
+  height: 95%;
+  flex: -1 0 35%;
+  display: flex;                   /* flex item is now also flex container */
+  flex-direction: column;          /* items will stack vertically */
+  justify-content: space-between;
+  padding-left: 600px;
+  padding-right: 232px;  /* align items vertically */
 }
 
+flex-container-4 > flex-item {
+  flex: 0.5 0 22%;
+  border: 1px dashed #333;
+  background-color: yellow;
+}
 
 /**** FOOTER ****/
-
 .footer {
   h2 {
     font-size: 32px;
@@ -74,61 +122,61 @@ h1, h2 {                  // PART OF BOOTSTRAP REPLACEMENT
 
 /**** IMAGES ****/
 
-.images-list-row {
-
-  h2 {
-    font-size: 20px;
-    span {
-      font-family: ingriditalic;
-      font-size: 20px;
-    }
-  }
-  p {
-  font-size: 17px;
-  }
-}
-
-#images-list-text {
-  font-family: ingridregular;
-}
-
-#images-list-text h2 {
-  font-size: 42px;
-}
-
-#images-list-text p  {
-  font-size: 25px;
-}
-
+// .images-list-row {
+//
+//   h2 {
+//     font-size: 20px;
+//     span {
+//       font-family: ingriditalic;
+//       font-size: 20px;
+//     }
+//   }
+//   p {
+//   font-size: 17px;
+//   }
+// }
+//
+// #images-list-text {
+//   font-family: ingridregular;
+// }
+//
+// #images-list-text h2 {
+//   font-size: 42px;
+// }
+//
+// #images-list-text p  {
+//   font-size: 25px;
+// }
+//
 
 /**** LANDING PAGE ****/
 
-#landing-title, #landing-title p {
-  font-size: 22px;
-  color: $primary-color;
-}
-
-.landing-option p {
-  font-size: 28px;
-  color: $primary-color;
-}
-
-#landing-title {
-  text-align: left;
-  h1 {
-    font-size: 58px;
-    // text-transform: uppercase;
-    // font-weight: bold;
-  }
-  span {
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: lighter;
-  }
-}
-
-.landing-explore {
-  color: $primary-color;
-  font-size: 24px;
-  font-weight: bold;
-}
+// #landing-title, #landing-title p {
+//   font-size: 22px;
+//   color: $primary-color;
+// }
+//
+// .landing-option p {
+//   font-size: 28px;
+//   color: $primary-color;
+// }
+//
+// #landing-title {
+//   text-align: left;
+//   h1 {
+//     font-size: 58px;
+//     // text-transform: uppercase;
+//     // font-weight: bold;
+//   }
+//   span {
+//     font-size: 40px;
+//     text-transform: uppercase;
+//     font-weight: lighter;
+//   }
+// }
+//
+// .landing-explore {
+//   color: $primary-color;
+//   font-size: 24px;
+//   font-weight: bold;
+// }

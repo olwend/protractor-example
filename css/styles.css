@@ -1,24 +1,8 @@
-
+/* disable image drag */
 /*
-
-* {
-  cursor: url(images/1percent.png), none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-
-  /* disable image drag */
-
-  /*
   -webkit-user-drag: none;
   user-drag: none; }
   */
-
-
 body {
   width: 1920px;
   height: 1080px;
@@ -41,176 +25,118 @@ button {
   line-height: inherit;
   background-color: black; }
 
+/****** CONTENTS ******/
+/**********************/
+@font-face {
+  font-family: 'gotham-book';
+  src: url("fonts/gotham-book.otf");
+  /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
+  font-weight: normal;
+  font-style: normal; }
 
-  /****** CONTENTS ******/
-  /**********************/
-  @font-face {
-    font-family: 'gotham-book';
-    src: url("fonts/gotham-book.otf");
-    /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
-    font-weight: normal;
-    font-style: normal;
-    }
+@font-face {
+  font-family: 'gotham-medium';
+  src: url("fonts/gotham-book.otf");
+  /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
+  font-weight: normal;
+  font-style: normal; }
 
-    @font-face {
-      font-family: 'gotham-medium';
-      src: url("fonts/gotham-book.otf");
-      /*src: url("fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2") format("woff2"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.woff") format("woff"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf") format("truetype"), url("fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight") format("svg");*/
-      font-weight: normal;
-      font-style: normal;
-      }
+/**** CORE ****/
+body {
+  font-family: 'gotham-book'; }
 
-  /**** CORE ****/
-  body {
-    /*font-family: 'gotham-medium';*/
-    font-family: 'gotham-book';
-   }
+h1 {
+  font-family: gotham-medium;
+  font-size: 55px;
+  font-weight: 1000;
+  line-height: 1.1;
+  color: white; }
 
-  h1 {
-    font-family: gotham-medium;
-    font-size: 55px;
-    font-weight: 1000;
-    line-height: 1.1;
-    color: white; }
+.title {
+  font-size: 35px; }
 
-  .title {
-      font-size: 35px; }
+h2 {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: white;
+  padding-top: 14px; }
 
-    h2 {
-      font-family: inherit;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.1;
-      color: white;
-      padding-top: 14px; }
+h3 {
+  font-family: gotham-medium;
+  font-size: 24px;
+  font-weight: 1000;
+  line-height: 1.1;
+  color: white;
+  padding-top: 14px; }
 
-    h3  {
-       font-family: gotham-medium;
-       font-size: 24px;
-       font-weight: 1000;
-       line-height: 1.1;
-       color: white;
-       padding-top: 14px;
-     }
+h4 {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #dbd8d8;
+  padding-top: 28px; }
 
-      h4 {
-        font-family: inherit;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.1;
-        color: #dbd8d8;
-        padding-top: 28px;
-       }
+/**** Flex-Container ****/
+flex-container-3 {
+  display: flex;
+  /* establish flex container */
+  flex-direction: row;
+  /* flex items will align horizontally */
+  justify-content: start;
+  /* center flex items horizontally */
+  align-items: center;
+  padding-left: 120px;
+  /* center flex items vertically */
+  height: 1080px;
+  width: 1920px;
+  border: 1px solid #777;
+  background-color: black;
+  /*padding: 200px;*/ }
+
+flex-container-3 > flex-item {
+  height: 90%;
+  flex: 0 0 45%;
+  /* <flex-grow> <flex-shrink> <flex-basis> */
+  margin-right: 8px;
+  width: 50%;
+  /*width: 50px;             /* a bit of space between the centered items */ }
+
+flex-container-4 {
+  height: 95%;
+  flex: -1 0 35%;
+  display: flex;
+  /* flex item is now also flex container */
+  flex-direction: column;
+  /* items will stack vertically */
+  justify-content: space-between;
+  padding-left: 600px;
+  padding-right: 232px;
+  /* align items vertically */ }
+
+flex-container-4 > flex-item {
+  flex: 0.5 0 22%;
+  border: 1px dashed #333;
+  background-color: yellow; }
 
 /**** FOOTER ****/
 .footer h2 {
-  font-size: 32px;
-  font-family: gotham-medium; }
+  font-size: 32px; }
 
 .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
   font-size: 22px; }
 
 /**** IMAGES ****/
-.images-list-row h2 {
-  font-size: 20px; }
-  .images-list-row h2 span {
-    font-family: ingriditalic;
-    font-size: 20px; }
+/**** LANDING PAGE ****/
+#container {
+  position: relative; }
 
-.images-list-row p {
-  font-size: 17px; }
-
-#images-list-text {
-  font-family: ingridregular; }
-
-#images-list-text h2 {
-  font-size: 42px; }
-
-#images-list-text p {
-  font-size: 25px; }
-
-
-
-  flex-container-1 {
-      display: flex;                   /* establish flex container */
-      flex-direction: row;             /* flex items will align horizontally */
-      justify-content: center;         /* center flex items horizontally */
-      align-items: center;
-      padding-left: 150px;           /* center flex items vertically */
-
-      /* for demo purposes only */
-      height: 1080px;
-      width: 1920px;
-      border: 1px solid #777;
-      background-color: black;
-      /*padding: 200px;*/
-  }
-
-flex-container-1 > flex-item {
-    height: 90%;
-    flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
-    margin-right: 8px;
-    width: 50%
-    /*width: 50px;             /* a bit of space between the centered items */*/
-}
-
-flex-container-2 {
-    height: 75%;
-    flex: -1 0 35%;
-    display: flex;                   /* flex item is now also flex container */
-    flex-direction: column;          /* items will stack vertically */
-    justify-content: space-between;
-    padding-left: 260px;
-    padding-right: 297px;  /* align items vertically */
-}
-
-flex-container-2 > flex-item {
-    flex: 0.5 0 22%;
-    border: 1px dashed #333;
-    background-color: yellow;
-}
-
-
-
-flex-container-3 {
-    display: flex;                   /* establish flex container */
-    flex-direction: row;             /* flex items will align horizontally */
-    justify-content: start;         /* center flex items horizontally */
-    align-items: center;
-    padding-left: 120px;           /* center flex items vertically */
-
-    /* for demo purposes only */
-    height: 1080px;
-    width: 1920px;
-    border: 1px solid #777;
-    background-color: black;
-    /*padding: 200px;*/
-}
-m
-flex-container-3 > flex-item {
-  height: 90%;
-  flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
-  margin-right: 8px;
-  width: 50%;
-  /*width: 50px;             /* a bit of space between the centered items */*/
-}
-
-flex-container-4 {
-  height: 95%;
-  flex: -1 0 35%;
-  display: flex;                   /* flex item is now also flex container */
-  flex-direction: column;          /* items will stack vertically */
-  justify-content: space-between;
-  padding-left: 600px;
-  padding-right: 232px;  /* align items vertically */
-}
-
-flex-container-4 > flex-item {
-  flex: 0.5 0 22%;
-  border: 1px dashed #333;
-  background-color: yellow;
-}
-
+#content {
+  width: 1920px;
+  height: 1200px;
+  position: absolute; }
 
 /* TRANSITIONS */
 #content.ng-enter, #content.ng-leave {
@@ -238,36 +164,24 @@ flex-container-4 > flex-item {
   bottom: 0;
   text-align: center;
   overflow: hidden; }
-  .footer h2 {
+  .footer .footer h2 {
     width: 30%;
     margin: 50px auto 0 auto;
     height: 60px; }
   .footer #home, .footer .zoom {
     position: absolute;
-    /*height: 145px;*/
-    ?padding-top: 70px; }
+    padding-top: 70px; }
   .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
-    /*background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-color: transparent;
     background-position: top center;
     top: 18px;
     border: none;
-    outline: none; }*/
-    width: 125px;
-    height: 52px;
-    border: 2px solid #f6f6f6;
-    margin: 10px -99px 10px -99px;
-    outline: none;
-    background-color: black;
-font-family: inherit;
-color: white;
-   }
+    outline: none; }
   .footer #home {
     width: 100px;
     left: 100px;
-    top: 18px;
-  }
-
+    top: 18px; }
   .footer #thumb--wrapper {
     position: absolute;
     background-size: 90px 75px;
@@ -276,42 +190,58 @@ color: white;
     top: 18px;
     border: none;
     outline: none; }
-
-    .divider {
-        width: 50px;
-        height: auto;
-        display: inline-block;
-    }
-
-  .footer #button--left{
+  .footer #button--left, .footer #button--right {
+    top: 0;
+    padding-top: 88px;
+    width: 175px;
+    background-size: 40px 70px; }
+  .footer #button--left {
     white-space: nowrap;
-   text align: center;
+    text-align: center;
     width: 295px;
     background-size: 40px 70px;
-    margin-right: 100px;
-    }
-
+    margin-right: 100px; }
   .footer #button--right {
-    /*top: 0;
-    padding-top: 50px;*/
     width: 145px;
-    background-size: 40px 70px;
-   }
+    background-size: 40px 70px; }
 
+flex-container-1 {
+  display: flex;
+  /* establish flex container */
+  flex-direction: row;
+  /* flex items will align horizontally */
+  justify-content: center;
+  /* center flex items horizontally */
+  align-items: center;
+  padding-left: 150px;
+  /* center flex items vertically */
+  /* for demo purposes only */
+  height: 1080px;
+  width: 1920px;
+  border: 1px solid #777;
+  background-color: black;
+  /*padding: 200px;*/ }
 
-   /* TRANSITIONS */
-   #content.ng-enter, #content.ng-leave {
-     transition: 0.7s ease-in-out all;
-     transition-delay: 0.2s; }
+flex-container-1 > flex-item {
+  height: 90%;
+  flex: 0 0 45%;
+  /* <flex-grow> <flex-shrink> <flex-basis> */
+  margin-right: 8px;
+  width: 50%; }
 
-   #content.ng-leave.ng-leave-active, #content.ng-enter {
-     opacity: 0; }
+flex-container-2 {
+  height: 75%;
+  flex: -1 0 35%;
+  display: flex;
+  /* flex item is now also flex container */
+  flex-direction: column;
+  /* items will stack vertically */
+  justify-content: space-between;
+  padding-left: 260px;
+  padding-right: 297px;
+  /* align items vertically */ }
 
-   #content.ng-enter.ng-enter-active, #content.ng-leave {
-     opacity: 1; }
-
-     #bossDiv
-     {
-      position: absolute;
-      top: 0;
-     }
+flex-container-2 > flex-item {
+  flex: 0.5 0 22%;
+  border: 1px dashed #333;
+  background-color: yellow; }

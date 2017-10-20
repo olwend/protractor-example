@@ -1,81 +1,176 @@
-.footer  {
-  height: 145px;
-  border-top: 1px dashed grey;
-  width: 100%;
+.footer {
+  height: 122px;
+  border-top: 2px solid white;
+  width: 1720px;
   position: absolute;
   bottom: 0;
   text-align: center;
   overflow: hidden;
-
-  h2 {
+}
+  .footer h2 {
     width: 30%;
     margin: 50px auto 0 auto;
     height: 60px;
-  }
-
-  #home, .zoom {
+ }
+  .footer #home, .footer .zoom {
     position: absolute;
-    height: 145px;
+    /*height: 145px;*/
     padding-top: 70px;
   }
-  #home, .zoom, #button--left, #button--right {
-    background-repeat: no-repeat;
+  .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
+    /*background-repeat: no-repeat;
     background-color: transparent;
     background-position: top center;
     top: 18px;
     border: none;
+    outline: none; }*/
+    width: 125px;
+    height: 52px;
+    border: 2px solid #f6f6f6;
+    margin: 10px -99px 10px -99px;
     outline: none;
+    background-color: black;
+font-family: inherit;
+color: white;
+   }
+  .footer #home {
+    width: 100px;
+    left: 100px;
+    top: 18px;
   }
 
-  #home {
-    width: 175px;
-    background-image: url("images/main_menu_icon.png");
-    left: 50px;
-  }
-
-  #thumb--wrapper {
+  .footer #thumb--wrapper {
     position: absolute;
     background-size: 90px 75px;
-    right: 50px;
+    right: 72px;
     height: 145px;
     top: 18px;
     border: none;
     outline: none;
   }
 
-  #button--left, #button--right {
-    top: 0;
-    padding-top: 88px;
-    width: 175px;
+    .divider {
+        width: 50px;
+        height: auto;
+        display: inline-block;
+    }
+
+  .footer #button--left{
+    white-space: nowrap;
+    text-align: center;
+    width: 295px;
     background-size: 40px 70px;
-  }
+    margin-right: 100px;
+    }
 
-  #button--left {
-    background-image: url("../css/images/left-arrow.png");
-  }
+  .footer #button--right {
+    /*top: 0;
+    padding-top: 50px;*/
+    width: 145px;
+    background-size: 40px 70px;
+   }
 
-  #button--right {
-    background-image: url("../css/images/right-arrow.png");
-  }
 
-  .zoom  {
-    background-size: 90px 75px;
-    right: 50px;
-  }
+// .footer  {
+//   height: 122px;
+//   border-top: 2px solid white;
+//   width: 1720px;
+//   position: absolute;
+//   bottom: 0;
+//   text-align: center;
+//   overflow: hidden;
+//
+//   .footer h2 {
+//     width: 30%;
+//     margin: 50px auto 0 auto;
+//     height: 60px;
+//   }
+//
+//   #home, .zoom {
+//     position: absolute;
+//     // height: 145px;
+//     padding-top: 70px;
+//   }
+//   #home, .zoom, #button--left, #button--right {
+//     background-repeat: no-repeat;
+//     background-color: transparent;
+//     background-position: top center;
+//     top: 18px;
+//     border: none;
+//     outline: none;
+//   }
+//
+//   #home {
+//     width: 100px;
+//     left: 100px;
+//     top: 18px;
+//   }
+//
+//   #thumb--wrapper {
+//     position: absolute;
+//     background-size: 90px 75px;
+//     right: 72px;
+//     height: 145px;
+//     top: 18px;
+//     border: none;
+//     outline: none;
+//   }
+//
+//   #button--left, #button--right {
+//     top: 0;
+//     padding-top: 88px;
+//     width: 175px;
+//     background-size: 40px 70px;
+//   }
+//
+//   #button--left {
+//     white-space: nowrap;
+//    text-align: center;
+//     width: 295px;
+//     background-size: 40px 70px;
+//     margin-right: 100px;
+//   }
+//
+//   #button--right {
+//     width: 145px;
+//     background-size: 40px 70px;
+//   }
 
-  #zoomOut {
-    background-image: url("images/zoom_out_icon.png");
-    width: 200px;
-  }
 
-  #zoom-text {
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: top left;
-    background-image: url("images/drag_icon.png");
-    padding-top: 20px;
-    width: 23%;
-    margin: 30px auto 0 auto;
-    height: 69px;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // .zoom  {
+  //   background-size: 90px 75px;
+  //   right: 50px;
+  // }
+  //
+  // #zoomOut {
+  //   background-image: url("images/zoom_out_icon.png");
+  //   width: 200px;
+  // }
+  //
+  // #zoom-text {
+  //   background-repeat: no-repeat;
+  //   background-color: transparent;
+  //   background-position: top left;
+  //   background-image: url("images/drag_icon.png");
+  //   padding-top: 20px;
+  //   width: 23%;
+  //   margin: 30px auto 0 auto;
+  //   height: 69px;
+  // }
 }

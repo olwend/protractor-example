@@ -1,4 +1,7 @@
-<div ng-mousedown="$location.path('/landing')">
+<div ng-mousedown="check()">
+
 <video width="1920" src="video/screensaver.webm" id="attractorVideo" height="1200" loop="loop" autoplay="true" style="position: absolute;top:0;left: 0;" >
 </video>
-</div>
+</div> 
+
+<div id="micrioError" style="display:none; position:absolute; color: red; top:50px; font-size:40px;left: 800px;">Could not connect</div>

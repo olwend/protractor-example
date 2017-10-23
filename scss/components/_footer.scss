@@ -1,30 +1,36 @@
 .footer {
-  height: 122px;
+  height: 12%;
   border-top: 2px solid white;
-  width: 1720px;
+  width: 1770px;
   position: absolute;
   bottom: 0;
   text-align: center;
   overflow: hidden;
+   left:75px;
 }
   .footer h2 {
     width: 30%;
     margin: 50px auto 0 auto;
-    height: 60px;
- }
+    height: 60px; }
   .footer #home, .footer .zoom {
     position: absolute;
-    padding-top: 70px;
-  }
+    /*height: 145px;*/
+    padding-top: 0px; }
   .footer #home, .footer .zoom, .footer #button--left, .footer #button--right {
+    /*background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top center;
+    top: 18px;
+    border: none;
+    outline: none; }*/
     width: 125px;
     height: 52px;
     border: 2px solid #f6f6f6;
     margin: 10px -99px 10px -99px;
     outline: none;
     background-color: black;
-    font-family: inherit;
-    color: white;
+font-family: inherit;
+color: white;
    }
   .footer #home {
     width: 100px;
@@ -39,28 +45,28 @@
     height: 145px;
     top: 18px;
     border: none;
-    outline: none;
-  }
+    outline: none; }
 
     .divider {
-      width: 50px;
-      height: auto;
-      display: inline-block;
+        width: 50px;
+        height: auto;
+        display: inline-block;
     }
 
-  .footer #button--left {
+  .footer #button--left{
     white-space: nowrap;
-    text-align: center;
+   text-align: center;
     width: 295px;
     background-size: 40px 70px;
     margin-right: 100px;
     }
 
   .footer #button--right {
+    /*top: 0;
+    padding-top: 50px;*/
     width: 145px;
     background-size: 40px 70px;
    }
-
 
 // .footer  {
 //   height: 122px;
@@ -164,4 +170,4 @@
   //   margin: 30px auto 0 auto;
   //   height: 69px;
   // }
-}
+

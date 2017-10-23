@@ -1,41 +1,41 @@
 flex-container-1 {
-    display: flex;                   /* establish flex container */
-    flex-direction: row;             /* flex items will align horizontally */
-    justify-content: center;         /* center flex items horizontally */
-    align-items: center;
-    padding-left: 150px;           /* center flex items vertically */
+      display: flex;                   /* establish flex container */
+      flex-direction: row;             /* flex items will align horizontally */
+      justify-content: center;         /* center flex items horizontally */
+      align-items: center;
+      padding-left: 150px;           /* center flex items vertically */
 
-    /* for demo purposes only */
-    height: 1080px;
-    width: 1920px;
-    border: 1px solid #777;
-    background-color: black;
-    /*padding: 200px;*/
-}
+      /* for demo purposes only */
+      height: 1080px;
+      width: 1920px;
+      border: 1px solid #777;
+      background-color: black;
+      /*padding: 200px;*/
+  }
 
 flex-container-1 > flex-item {
-  height: 90%;
-  flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
-  margin-right: 8px;
-  width: 50%
-  /*width: 50px;             /* a bit of space between the centered items */
+    height: 90%;
+    flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
+    margin-right: 8px;
+    width: 50%
+    /*width: 50px;             /* a bit of space between the centered items */
 }
 
 flex-container-2 {
-  height: 100%;
-  flex: -1 0 35%;
-  display: flex;                   /* flex item is now also flex container */
-  flex-direction: column;          /* items will stack vertically */
-  justify-content: space-between;
-  padding-left: 260px;
-  padding-right: 297px;
-  padding-top: 111px;  /* align items vertically */
+    height: 85%;
+    padding-bottom: 105px;
+    flex: -1 0 35%;
+    display: flex;                   /* flex item is now also flex container */
+    flex-direction: column;          /* items will stack vertically */
+    justify-content: space-between;
+    padding-left: 260px;
+    padding-right: 297px;  /* align items vertically */
 }
 
 flex-container-2 > flex-item {
-  flex: 0.5 0 22%;
-  border: 1px dashed #333;
-  background-color: yellow;
+    flex: 0.5 0 22%;
+    border: 1px dashed #333;
+    background-color: yellow;
 }
 
 

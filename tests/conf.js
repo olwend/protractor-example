@@ -1,17 +1,12 @@
 exports.config = {
-  seleniumAddress: 'http://localhost:4445/wd/hub',
-
-  multiCapabilities: {
-  	'browserName': 'chrome'
+	framework: 'jasmine',
+	seleniumAddress: 'http://localhost:4444/wd/hub',
+	specs: ['todo-spec.js'] ,
+	multiCapabilities: [{
+  		browserName: 'chrome'
 	}, {
-		'browserName': 'firefox'
+		browserName: 'firefox'
 	}]
 
-  specs: ['todo-spec.js'],
-  ['todo-two.js'],
-	},
+}
 
-  jasmineNodeOpts: {
-    showColors: true
-  }
-};

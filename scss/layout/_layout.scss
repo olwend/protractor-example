@@ -4,7 +4,7 @@
 
 #content {
   width: 1920px;
-  height: 1200px;
+  height: 1080px;
   position: absolute;
 }
 
@@ -23,11 +23,28 @@
 
 .cropContainer {
   width: 1920px;
-  height: 1055px;
+  height: 1080px;
   position: absolute;
 
-  &, & .cropFrame, & .cropFrame img, {
+ .cropContainer, .cropContainer .cropFrame, .cropContainer .cropFrame img {
     -webkit-transform: translate3d(0,0,0);
   }
 
 }
+
+/* TRANSITIONS */
+   #content.ng-enter, #content.ng-leave {
+     transition: 0.7s ease-in-out all;
+     transition-delay: 0.2s; }
+
+   #content.ng-leave.ng-leave-active, #content.ng-enter {
+     opacity: 0; }
+
+   #content.ng-enter.ng-enter-active, #content.ng-leave {
+     opacity: 1; }
+
+     #bossDiv
+     {
+      position: absolute;
+      top: 0;
+     }

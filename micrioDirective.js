@@ -15,7 +15,11 @@ angular.module('myApp')
         link:  function (scope, element, attrs) {
 
             var startZoom = 0.2;
-            var zoomList = {"A": 0.5, "B": 0.2  };
+
+            var cameraXList = {"1-1": 0.2000633613179154, "1-2": 0.8528945872662386, "2-1": 0.2990349839842413, "2-2": 0, "2-3": 0 };
+            var cameraYList = {"1-1": 0.28501055594651653, "1-2": 0.7310648671158269, "2-1": 0.7850137021549736, "2-2": 0, "2-3": 0 };
+            var cameraZoomList = {"1-1": 0.5, "1-2": 0.68, "2-1": 0.3969906462191357, "2-2": 0.5, "2-3": 0.5 };
+
 
 
             scope.micrio = new Micrio({
@@ -55,15 +59,18 @@ angular.module('myApp')
             scope.element.addEventListener('metadata', function(e) {
                 console.log('got all markers!', e.detail);
 
+
                 // micrio.markers._container autoscales and moves based on the current viewport
                 scope.micrio.el.appendChild(scope.micrio.markers._container);
+
 
                 // Loop through the markers
                 for(var i=0;i<scope.micrio.markers.items.length;i++) {
                     var marker = scope.micrio.markers.items[i];
 
-                    marker._container.childNodes[0].innerHTML = marker.class.substring(0,1);
+                    marker._container.childNodes[0].innerHTML = marker.class.substring(2,3);
 
+                   /*
                     console.log('Marker data...', marker.json);
 
                     var view = marker.json.view; // the viewport [x1,y1,x2,y2]
@@ -83,9 +90,11 @@ angular.module('myApp')
 
                     // Put the div inside the markers container which does the rest of the work
                     scope.micrio.markers._container.appendChild(_area);
+                    */
                 }
 
             });
+
 
 
 
@@ -96,51 +105,57 @@ angular.module('myApp')
             });
 
 
+            scope.disableHotspots = false;
+
             // Catch clicks on markers, and do a custom camera transition
             scope.element.addEventListener('click', function(e) {
 
+                console.log('current camera position:' + scope.micrio.camera.ba);
+
                 // If the clicked element isn't a marker, do nothing
-                if(e.target && e.target.marker) {
+                if(e.target && e.target.marker ) {
                     e.stopPropagation();
+                    e.preventDefault();
                     scope.micrio.camera.stop();
-                    scope.micrio.camera.events.unhook();   //this disabled controls
 
+                    if(!scope.disableHotspots) {
 
-                    //micrio.el.addEventListener('mousewheel','mousedrag', zoomHandler, true);
-                    // The actual JS instance of the marker
-                    var marker = e.target.marker;
-                    console.info('Clicked a marker!', marker);
-                    // The marker json data
-                    var json = marker.json;
-                    console.info('This is the original marker JSON', json);
+                            //scope.micrio.camera.events.unhook();   //this disabled controls
+                            scope.disableHotspots = true;
 
-                    var selected = marker.json.class.substring(0,1);
+                            //micrio.el.addEventListener('mousewheel','mousedrag', zoomHandler, true);
+                            // The actual JS instance of the marker
+                            var marker = e.target.marker;
+                            console.info('Clicked a marker!', marker);
+                            // The marker json data
+                            var json = marker.json;
+                            //console.info('This is the original marker JSON', json);
 
-                    marker.open();
-                    // Do anything custom here
-                    console.info('Clicked a custom marker! The body text is: ', json.body);
-                    // Example custom camera transition:
+                            var selected = marker.json.class;
 
-                    var offset = (marker.popup._container.clientWidth/scope.micrio.container.clientWidth)/2;
+                            marker.open();
+                            // Do anything custom here
+                            console.info('Clicked a custom marker! The body text is: ', json.body);
+                            // Example custom camera transition:
 
-                    scope.micrio.camera.flyTo((json.x), json.y, zoomList[selected], 1500);
+                            var offset = (marker.popup._container.clientWidth / scope.micrio.container.clientWidth) / 2;
 
-                    for (var i = 0; i < scope.micrio.markers.items.length; i++) {
-                        if(scope.micrio.markers.items[i].class.substring(0,1)  === selected)
-                        {
-                            /* show area box */
-                            document.getElementById("area_" + scope.micrio.markers.items[i].id).classList.toggle('show');
-                            var filterClass = 'show' + selected;
-                            $('#filter').addClass(filterClass);
-                        }
-                        else {
-                            document.getElementById("area_" + scope.micrio.markers.items[i].id).classList.remove('show');
+                            scope.micrio.camera.flyTo((cameraXList[selected]), (cameraYList[selected]), cameraZoomList[selected], 1500);
 
-                        }
-                    }
+                            for (var i = 0; i < scope.micrio.markers.items.length; i++) {
+                                if (scope.micrio.markers.items[i].class === selected) {
+                                    /* show area box */
+                                    //document.getElementById("area_" + scope.micrio.markers.items[i].id).classList.toggle('show');
+                                    var filterClass = 'show' + selected;
+                                    $('#filter').addClass(filterClass);
+                                }
+                                else {
+                                    //document.getElementById("area_" + scope.micrio.markers.items[i].id).classList.remove('show');
+                                }
+                            }
 
-                    $('.marker-popup').addClass('ready');
-
+                            $('.marker-popup').addClass('ready');
+                           }
 
                 }
 
@@ -163,10 +178,11 @@ angular.module('myApp')
                     for (var i = 0; i < scope.micrio.markers.items.length; i++) {
                         scope.micrio.markers.items[i].popup._container.classList.remove('ready');
                     }
-                    $('#filter').removeClass('showA').removeClass('showB');
+                    $('#filter').removeClass('show1-1 show1-2 show2-1 show2-2 show2-3');
 
                    scope.timeout = $timeout(function() {
                         scope.micrio.camera.events.hook();
+                       scope.disableHotspots = false;
                     }, 1000);
 
                 }

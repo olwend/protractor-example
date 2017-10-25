@@ -21,49 +21,50 @@ describe('venom interactive App', function() {
 		callback();
 	});
 
-	it ('should have title Brooklyn Papyrus', function(){
+	it ('should have title Brooklyn Papyrus and other content', function(){
+		element(by.id('content')).click();
+		browser.driver.sleep(1000);
+		expect(element(by.css('h1')).getText()).toEqual('Brooklyn Papyrus');
+		expect(element(by.css('h4')).getText()).toEqual('Images courtesy of Brooklyn Museum. Bequest of Theodora Wilbur from the collection of her father, Charles Edwin Wilbour, 47.218.85a-f/47.218.48a-f');
+	});
+
+// BLOCKED PENDING RENAMING OR IDs
+	it ('should go to Symptoms & Outcomes when box is mouse clicked', function(){
+		element(by.id('content')).click();
+		browser.driver.sleep(1000);
+// 		element(by.css("#content > flex-container-1 > flex-container-2 > img:nth-child(1)").click());
+// 		element(by.model('ng-mousedown="$location.path('/symptomsAndOutcome')').click();
+		browser.actions().
+ 			mouseDown(element(by.css('#content > flex-container-1 > flex-container-2 > img:nth-child(1)')));
+ 		
+ 		expect(element(by.css('h1')).getText()).toEqual('Symptoms and outcome');
+		// expect(browser.getTitle().toEqual('Symptoms and outcome'));
+
+	});
+
+// 	it ('should go to Treatments when box is mouse clicked', function(){
+// 		// #content > flex-container-1 > flex-container-2 > img:nth-child(2)
+
+// 	});
+
+	it ('should stay on landing page when clicking out of boxes', function(){
 		element(by.id('content')).click();
 		browser.driver.sleep(1000);
 		expect(element(by.css('h1')).getText()).toEqual('Brooklyn Papyrus');
 	});
+	// BLOCKED PENDING RENAMING OR IDs
+	// it ('should go to Symptoms & Outcomes when box is touched', function(){
 
-	it ('should go to Symptoms & Outcomes when box is mouse clicked', function(){
+	// });
 
-	});
+	// it ('should go to Treatments when box is touched', function(){
 
-	it ('should go to Treatments when box is mouse clicked', function(){
-
-	});
-
-	it ('should stay on landing page when clicking out of boxes', function(){
-
-	});
-
-	it ('should go to Symptoms & Outcomes when box is touched', function(){
-
-	});
-
-	it ('should go to Treatments when box is touched', function(){
-
-	});
+	// });
 
 	it ('should stay on landing page when touching screen out of boxes', function(){
 
 	});
 
 
-
 });
 
-// 	it ('clicking on S&O goes to S&O Url'){
-// 		browser.actions().
-// 			mouseDown(element(by.id('#content > flex-container-1'))).
-// 	// expect URL to be....
-			
-// 	}
-
-// 	it ('touch pad on S&O goes to S&O Url'){
-// 		browser.touchActions().
-// 			tap(element(by.id('#content > flex-container-1'))).
-// 	// expect URL to be....	
-// }

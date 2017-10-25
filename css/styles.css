@@ -1,22 +1,21 @@
 
-/*
 
 * {
+ /*
   cursor: url(images/1percent.png), none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-
-  /* disable image drag */
-
-  /*
-  -webkit-user-drag: none;
-  user-drag: none; }
   */
+
+  /* disable image/text drag */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
 
 
 body {
@@ -153,7 +152,7 @@ flex-container-1 > flex-item {
     height: 90%;
     flex: 0 0 45%;                   /* <flex-grow> <flex-shrink> <flex-basis> */
     margin-right: 8px;
-    width: 50%
+    width: 50%;
     /*width: 50px;             /* a bit of space between the centered items */*/
 }
 
@@ -194,7 +193,7 @@ flex-container-3 .micrio-container {
     height: 75%;
     /* position: absolute; */
     margin: 75px;
-    outline: 1px solid white;
+  /*  outline: 1px solid white; */
 }
 
 .micrio-container canvas.micrio {
@@ -230,6 +229,18 @@ flex-container-4  > flex-item {
     padding: 0 55px 0 20px;
     margin-top: 70px;
   }
+
+
+flex-container-4  > flex-item span {
+    transition: all 1s ease-in-out;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+
+flex-container-4  > flex-item span.selected {
+    color: #ffce42;
+}
 
 
 /* TRANSITIONS */
@@ -307,7 +318,7 @@ color: white;
 
   .footer #button--left{
     white-space: nowrap;
-   text align: center;
+    text-align: center;
     width: 295px;
     background-size: 40px 70px;
     margin-right: 100px;

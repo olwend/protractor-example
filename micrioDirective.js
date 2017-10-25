@@ -14,11 +14,11 @@ angular.module('myApp')
 
         link:  function (scope, element, attrs) {
 
-            var startZoom = 0.2;
+            var startZoom = 0;
 
-            var cameraXList = {"1-1": 0.2000633613179154, "1-2": 0.8528945872662386, "2-1": 0.2990349839842413, "2-2": 0, "2-3": 0 };
-            var cameraYList = {"1-1": 0.28501055594651653, "1-2": 0.7310648671158269, "2-1": 0.7850137021549736, "2-2": 0, "2-3": 0 };
-            var cameraZoomList = {"1-1": 0.5, "1-2": 0.68, "2-1": 0.3969906462191357, "2-2": 0.5, "2-3": 0.5 };
+            var cameraXList = {"1-1": 0.2000633613179154, "1-2": 0.8528945872662386, "2-1": 0.2990349839842413, "2-2": 0.2580214966513812, "2-3": 0.2790161414296695 };
+            var cameraYList = {"1-1": 0.28501055594651653, "1-2": 0.7310648671158269, "2-1": 0.7850137021549736, "2-2": 0.8210767244969491, "2-3": 0.1404872853148715 };
+            var cameraZoomList = {"1-1": 0.5, "1-2": 0.68, "2-1": 0.3969906462191357, "2-2": 0.51, "2-3": 0.7 };
 
 
 
@@ -105,6 +105,15 @@ angular.module('myApp')
             });
 
 
+            scope.showHotspot = function(id) {
+                if(!scope.disableHotspots)
+                    {
+                    console.log('showHotspot');
+                    $(".class-" + id + " .marker").trigger("click");
+                   }
+            }
+
+
             scope.disableHotspots = false;
 
             // Catch clicks on markers, and do a custom camera transition
@@ -114,14 +123,18 @@ angular.module('myApp')
 
                 // If the clicked element isn't a marker, do nothing
                 if(e.target && e.target.marker ) {
+
+                    /*  disable all markers */
+
                     e.stopPropagation();
                     e.preventDefault();
                     scope.micrio.camera.stop();
 
                     if(!scope.disableHotspots) {
 
-                            //scope.micrio.camera.events.unhook();   //this disabled controls
-                            scope.disableHotspots = true;
+                         scope.disableHotspots = true;
+                         $('.marker-container .marker').css('pointer-events', 'none');
+                         scope.micrio.camera.events.unhook();   //this disabled controls
 
                             //micrio.el.addEventListener('mousewheel','mousedrag', zoomHandler, true);
                             // The actual JS instance of the marker
@@ -138,9 +151,11 @@ angular.module('myApp')
                             console.info('Clicked a custom marker! The body text is: ', json.body);
                             // Example custom camera transition:
 
-                            var offset = (marker.popup._container.clientWidth / scope.micrio.container.clientWidth) / 2;
+                            //var offset = (marker.popup._container.clientWidth / scope.micrio.container.clientWidth) / 2;
 
                             scope.micrio.camera.flyTo((cameraXList[selected]), (cameraYList[selected]), cameraZoomList[selected], 1500);
+
+                            $('#span-' + selected).addClass('selected');
 
                             for (var i = 0; i < scope.micrio.markers.items.length; i++) {
                                 if (scope.micrio.markers.items[i].class === selected) {
@@ -171,9 +186,13 @@ angular.module('myApp')
                     var areas=  document.getElementsByClassName("area");
                     //document.getElementById("filter").classList.toggle('show');
 
+                    /*
                     for (var i = 0; i < areas.length; i++) {
                         areas[i].classList.remove('show');
                     }
+                    */
+
+                    $('flex-container-4 flex-item span').removeClass('selected');
 
                     for (var i = 0; i < scope.micrio.markers.items.length; i++) {
                         scope.micrio.markers.items[i].popup._container.classList.remove('ready');
@@ -183,6 +202,8 @@ angular.module('myApp')
                    scope.timeout = $timeout(function() {
                         scope.micrio.camera.events.hook();
                        scope.disableHotspots = false;
+                       /*  re-enable all markers */
+                       $('.marker-container .marker').css('pointer-events', 'auto');
                     }, 1000);
 
                 }

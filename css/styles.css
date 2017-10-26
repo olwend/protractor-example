@@ -103,10 +103,10 @@ flex-container-3 {
 
 flex-container-3 .micrio-container {
   width: 1300px;
-  background-color: red;
-  height: 79%;
-  margin: 50px;
-  outline: 1px solid white; }
+  height: 75%;
+  margin: 75px;
+ /* outline: 1px solid white; */
+  }
 
 .micrio-container canvas.micrio {
   background: #000 !important; }

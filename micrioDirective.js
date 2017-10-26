@@ -32,6 +32,7 @@ angular.module('myApp')
                 hookEvents: true,
                 fullScreen: false,
                 toolBar: false,
+                loaderBar: false,
                 noLogo: true,
                 // Initializes and draws image on instance creation, defaults to true
                 autoInit: true,

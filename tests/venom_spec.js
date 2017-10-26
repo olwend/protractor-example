@@ -9,7 +9,8 @@ describe('venom interactive App', function() {
 	// });
 
 	beforeEach(function() {
-		browser.get('file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html');
+		// browser.get('file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html');
+		browser.get('file:///Users/DOE/Projects/nhm-gallery-interactive-venom-papyrus/index.html');
 		browser.driver.sleep(1000);
 			
 	});
@@ -32,20 +33,16 @@ describe('venom interactive App', function() {
 	it ('should go to Symptoms & Outcomes when box is mouse clicked', function(){
 		element(by.id('content')).click();
 		browser.driver.sleep(1000);
-// 		element(by.css("#content > flex-container-1 > flex-container-2 > img:nth-child(1)").click());
-// 		element(by.model('ng-mousedown="$location.path('/symptomsAndOutcome')').click();
-		browser.actions().
- 			mouseDown(element(by.css('#content > flex-container-1 > flex-container-2 > img:nth-child(1)')));
- 		
+		element(by.id('1')).click();
  		expect(element(by.css('h1')).getText()).toEqual('Symptoms and outcome');
-		// expect(browser.getTitle().toEqual('Symptoms and outcome'));
-
 	});
 
-// 	it ('should go to Treatments when box is mouse clicked', function(){
-// 		// #content > flex-container-1 > flex-container-2 > img:nth-child(2)
-
-// 	});
+  it ('should go to Treatments when box is mouse clicked', function(){
+		element(by.id('content')).click();
+		browser.driver.sleep(1000);
+		element(by.id('2')).click();
+		expect(element(by.css('h1.title')).getText()).toEqual('Treatments');
+	});
 
 	it ('should stay on landing page when clicking out of boxes', function(){
 		element(by.id('content')).click();
@@ -61,10 +58,10 @@ describe('venom interactive App', function() {
 
 	// });
 
-	it ('should stay on landing page when touching screen out of boxes', function(){
-
-	});
-
+	// it ('should stay on landing page when touching screen out of boxes', function(){
+	// 
+	// });
+	// 
 
 });
 

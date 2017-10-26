@@ -1,5 +1,5 @@
 exports.config = {
-	framework: 'jasmine',
+	framework: 'jasmine2',
 	seleniumAddress: 'http://localhost:4444/wd/hub',
 	capabilities: {
 		browserName: 'chrome',
@@ -12,8 +12,10 @@ exports.config = {
 		
 	
 	onPrepare: function() {
-			browser.resetUrl = 'file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver';
+			// browser.resetUrl = 'file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver';
+			browser.resetUrl = 'file:///Users/DOE/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver'
 			},
+			// /Users/DOE/Projects/nhm-gallery-interactive-venom-papyrus
 
 
 	jasmineNodeOpts: {

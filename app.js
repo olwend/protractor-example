@@ -34,10 +34,10 @@ angular.module('myApp', [
     //console.log('view content loaded');
     if($location.path().indexOf("screensaver") == -1) {
       //console.log('sending GA');
-      // ga('send', 'pageview', $location.path());
-      // visitor.pageview( $location.path(), function(err) {
-      //   console.log('analytics error:' + err);
-      // });
+       ga('send', 'pageview', $location.path());
+       visitor.pageview( $location.path(), function(err) {
+        console.log('analytics error:' + err);
+       });
     }
 
     if ($rootScope.mouseHide === false) {

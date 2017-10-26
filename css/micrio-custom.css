@@ -4,9 +4,7 @@
 .micrio-container .marker-container
 {
     z-index: 2;
-
 }
-
 
 .micrio-container .marker-popup {
     position: absolute;
@@ -14,7 +12,7 @@
     left: 0;
     background: rgba(0, 0, 0, 1);
     color: #fff;
-    margin: -14px 0 0 24px;
+    margin: -51px 0 0 -51px;
     cursor: auto;
     font-size: 18px;
     -webkit-user-select: text;
@@ -22,11 +20,12 @@
     -ms-user-select: text;
     user-select: text;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    min-width: 500px;
+    min-width: 230px;
+    max-width: 600px;
     border: 3px solid #ffce42;
     font-family: Arial;
-    font-size: 20px;
-   /*  padding: 20px; */
+    font-size: 24px;
+    paddinG: 0px 15px 10px 15px;
 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -37,6 +36,7 @@
     opacity: 1;
     transition: opacity 1s ease-in-out;
     transition-delay: 1s;
+    z-index: -1;
 }
 
 .micrio-container .marker-popup button.close {
@@ -45,22 +45,37 @@
 .micrio-container .marker-popup article {
     padding: 15px;
     width:auto;
-    max-width: 500px;
     overflow-y: auto;
     position: relative;
     white-space: nowrap;
 }
 
+.micrio-container .marker-popup article h3 {
+   display:none;
+}
+
+
+.micrio-container .marker-popup article .body h3 {
+    padding-left: 55px;
+    display: block;
+    font-size: 30px;
+}
+
+.micrio-container .marker-popup article p {
+    white-space: nowrap;
+    margin:0;
+}
+
+
+
 .micrio-container .marker-popup button.close {
     background-image: url(../images/micrio/close-temp.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 30px 30px;
-    width: 30px;
-    height: 30px;
+    background-size: 45px 45px;
+    width: 45px;
+    height: 45px;
 }
-
-
 
 
 .markers-container .area {
@@ -94,23 +109,42 @@
     position: absolute;
     }
 
-#filter.showA,#filter.showB {
+#filter.show1-1, #filter.show1-2, #filter.show2-1, #filter.show2-2, #filter.show2-3 {
     opacity: 1;
     transition-delay: 1.5s;
   }
 
 
-#filter.showA:before {
-    -webkit-mask-image: url(../images/micrio/mask1-A1-blur.png), -webkit-linear-gradient(white, white);
-    top:0px;
-    right:0px;
+#filter.show1-1:before {
+    -webkit-mask-image: url(../images/micrio/mask1-1.png), -webkit-linear-gradient(white, white);
    }
 
-#filter.showB:before {
-    -webkit-mask-image: url(../images/micrio/mask1-B.png), -webkit-linear-gradient(white, white);
-    top:24px;
-    right:0px;
+#filter.show1-2:before {
+    -webkit-mask-image: url(../images/micrio/mask1-2.png), -webkit-linear-gradient(white, white);
+    top: 0px;
+    left: -100px;
+
   }
+
+#filter.show2-1:before {
+    -webkit-mask-image: url(../images/micrio/mask2-1.png), -webkit-linear-gradient(white, white);
+    top:0px;
+    right:0px;
+}
+
+#filter.show2-2:before {
+    -webkit-mask-image: url(../images/micrio/mask2-2.png), -webkit-linear-gradient(white, white);
+    top: 0px;
+    right:0px;
+}
+
+#filter.show2-3:before {
+    -webkit-mask-image: url(../images/micrio/mask2-3.png), -webkit-linear-gradient(white, white);
+    top: 0px;
+    right:0px;
+}
+
+
 
 #filter:before  {
     -webkit-mask-composite: xor;
@@ -132,20 +166,29 @@
     content: "";
 }
 
-.micrio-container .marker-container.class-default .marker,  .micrio-container .marker-container.class-a-visible .marker,  .micrio-container .marker-container.class-b-visible .marker {
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
+.micrio-container .marker-container .marker  {
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
     background-color: white;
     /* content: "A"; */
     text-align: center;
-    line-height: 40px;
+    line-height: 45px;
     vertical-align: middle;
     font-size: 25px;
-    font-family: arial;
+    font-weight:bold;
+    font-family: gotham-book;
     transition: all 1s ease-in-out;
-
+    display: none;
 }
+
+#micrioContainer1 .marker-container.class-1-1 .marker, #micrioContainer1 .marker-container.class-1-2 .marker  {
+    display: block;
+}
+#micrioContainer2 .marker-container.class-2-1 .marker, #micrioContainer2 .marker-container.class-2-2 .marker, #micrioContainer2 .marker-container.class-2-3 .marker   {
+    display: block;
+}
+
 
 .marker-container.opened .marker  {
     background-color: #ffce42 !important;

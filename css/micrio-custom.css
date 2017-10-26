@@ -76,6 +76,7 @@
     background-size: 45px 45px;
     width: 45px;
     height: 45px;
+    cursor: none;
 }
 
 
@@ -171,6 +172,7 @@
     border-radius: 25px;
     width: 45px;
     height: 45px;
+    cursor: none;
     background-color: white;
     /* content: "A"; */
     text-align: center;

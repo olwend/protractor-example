@@ -21,8 +21,8 @@ Ensure that properties on chrome include  --args allow-file-access-from-files ``
 
 Assuming you have installed webdriver-manager as per instructions above
 1. Ensure that venom_conf.js & venom_spec.js list the correct path to your local files in venom repo.
+e.g. 
+browser.resetUrl = 'file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver';
 
-```resetUrl = 'file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver';
-```
 2. cd to \tests folder - enter ``` webdriver-manager start``` on command line
-3. ```protractor venom_conf.js``` to run on screen and output results as "...F.." to terminal window.
+3. enter```protractor venom_conf.js``` to run on screen and output results as "...F.." to terminal window.

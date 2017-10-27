@@ -1,6 +1,7 @@
 exports.config = {
 	framework: 'jasmine2',
 	seleniumAddress: 'http://localhost:4444/wd/hub',
+	// directConnect: true,
 	capabilities: {
 		browserName: 'chrome',
 		chromeOptions: {
@@ -9,8 +10,8 @@ exports.config = {
 	},
 
 	specs: ['venom_spec.js'],
-		
-	
+
+
 	onPrepare: function() {
 			// browser.resetUrl = 'file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver';
 			browser.resetUrl = 'file:///Users/DOE/Projects/nhm-gallery-interactive-venom-papyrus/index.html#/screensaver'
@@ -22,6 +23,3 @@ exports.config = {
     showColors: true, // Use colors in the command line report.
   }
 }
-
-
-

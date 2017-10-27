@@ -12,7 +12,7 @@ describe('venom interactive App', function() {
 		// browser.get('file:///C:/Projects/nhm-gallery-interactive-venom-papyrus/index.html');
 		browser.get('file:///Users/DOE/Projects/nhm-gallery-interactive-venom-papyrus/index.html');
 		browser.driver.sleep(1000);
-			
+
 	});
 
 
@@ -41,7 +41,8 @@ describe('venom interactive App', function() {
 		element(by.id('content')).click();
 		browser.driver.sleep(1000);
 		element(by.id('2')).click();
-		expect(element(by.css('h1.title')).getText()).toEqual('Treatments');
+		browser.driver.sleep(1000);
+		expect(element(by.id('title')).getText()).toEqual('Treatments');
 	});
 
 	it ('should stay on landing page when clicking out of boxes', function(){
@@ -59,9 +60,8 @@ describe('venom interactive App', function() {
 	// });
 
 	// it ('should stay on landing page when touching screen out of boxes', function(){
-	// 
+	//
 	// });
-	// 
+	//
 
 });
-

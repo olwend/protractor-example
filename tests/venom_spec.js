@@ -42,7 +42,7 @@ describe('venom interactive App', function() {
 		browser.driver.sleep(1000);
 		element(by.id('2')).click();
 		browser.driver.sleep(1000);
-		expect(element(by.id('title')).getText()).toEqual('Treatments');
+		expect(element(by.css('h3')).getText()).toEqual('Select a number to see the translation of the hieroglyphics.');
 	});
 
 	it ('should stay on landing page when clicking out of boxes', function(){

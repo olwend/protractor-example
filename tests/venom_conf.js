@@ -1,7 +1,7 @@
 exports.config = {
 	framework: 'jasmine2',
 	seleniumAddress: 'http://localhost:4444/wd/hub',
-	// directConnect: true,
+	directConnect: true,
 	capabilities: {
 		browserName: 'chrome',
 		chromeOptions: {

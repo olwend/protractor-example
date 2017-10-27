@@ -2,13 +2,12 @@
 
 A repository for the gallery interactive for the Venom temporary exhibition (South Kensington)
 
-## Protractor tests
+## Protractor tests set up
 
 Protractor uses a Selenium Server to act as a proxy between test script web driver API commands and the browser(s) configured.
 See http://www.protractortest.org/#/
 
 This is a Chrome app so test configuration uses directConnect for speed.
-```Chrome.app --args allow-file-access-from-files```
 
 ```capabilities: {
   browserName: 'chrome',
@@ -16,7 +15,8 @@ This is a Chrome app so test configuration uses directConnect for speed.
     args: ['allow-file-access-from-files']
     }
     ```
-Ensure that properties on chrome include
+Ensure that properties on chrome include ```Chrome.app --args allow-file-access-from-files```
+
 ## Running tests
 
 Assuming you have installed webdriver-manager as per instructions above

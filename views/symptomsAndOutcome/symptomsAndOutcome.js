@@ -6,14 +6,6 @@ angular.module('myApp.symptomsAndOutcome', ['ngRoute', 'idleTimer', 'ngIdle'])
   $routeProvider.when('/symptomsAndOutcome', {
     templateUrl: 'views/symptomsAndOutcome/symptomsAndOutcomeList.html',
     controller: 'symptomsAndOutcomeCtrl'
-  })
-  . when('/symptomsAndOutcome/:image', {
-    templateUrl: 'views/symptomsAndOutcome/symptomsAndOutcomeFull.html',
-    controller: 'symptomsAndOutcomeFullCtrl'
-  })
-  .when('/symptomsAndOutcome/:image/:zoom', {
-    templateUrl: 'views/symptomsAndOutcome/symptomsAndOutcomeZoom.html',
-    controller: 'symptomsAndOutcomeZoomCtrl'
   });
 }])
 

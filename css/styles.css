@@ -103,10 +103,10 @@ flex-container-3 {
 
 flex-container-3 .micrio-container {
   width: 1300px;
-  height: 75%;
-  margin: 75px;
- /* outline: 1px solid white; */
-  }
+  background-color: red;
+  height: 79%;
+  margin: 50px;
+  outline: 1px solid white; }
 
 .micrio-container canvas.micrio {
   background: #000 !important; }
@@ -292,7 +292,7 @@ flex-container-1 {
   /* center flex items vertically */
   height: 1080px;
   width: 1920px;
-
+  border: 1px solid #777;
   background-color: black; }
 
 flex-container-1 > flex-item {
@@ -319,15 +319,3 @@ flex-container-2 > flex-item {
   flex: 0.5 0 22%;
   border: 1px dashed #333;
   background-color: yellow; }
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About

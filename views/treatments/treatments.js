@@ -6,14 +6,6 @@ angular.module('myApp.treatments', ['ngRoute', 'idleTimer', 'ngIdle'])
   $routeProvider.when('/treatments', {
     templateUrl: 'views/treatments/treatmentsList.html',
     controller: 'treatmentsCtrl'
-  })
-  . when('/treatments/:image', {
-    templateUrl: 'views/treatments/treatmentsFull.html',
-    controller: 'treatmentsFullCtrl'
-  })
-  .when('/treatments/:image/:zoom', {
-    templateUrl: 'views/treatments/treatmentsZoom.html',
-    controller: 'treatmentsZoomCtrl'
   });
 }])
 

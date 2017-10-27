@@ -1,23 +1,16 @@
-/* disable image drag */
-
 * {
- /*
-  cursor: url(images/1percent.png), none;
-  */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
-  /* disable image/text drag */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/* disable image drag */
+/*
   -webkit-user-drag: none;
-  user-drag: none;
-}
-
-
-
+  user-drag: none; }
+  */
 body {
   width: 1920px;
   height: 1080px;
@@ -104,9 +97,7 @@ flex-container-3 {
 flex-container-3 .micrio-container {
   width: 1300px;
   height: 75%;
-  margin: 75px;
- /* outline: 1px solid white; */
-  }
+  margin: 75px; }
 
 .micrio-container canvas.micrio {
   background: #000 !important; }
@@ -135,6 +126,14 @@ flex-container-4 > flex-item {
   flex: 0.5 0 22%;
   padding: 0 55px 0 20px;
   margin-top: 70px; }
+
+flex-container-4 > flex-item span {
+  transition: all 1s ease-in-out;
+  padding-bottom: 10px;
+  display: inline-block; }
+
+flex-container-4 > flex-item span.selected {
+  color: #ffce42; }
 
 /**** FOOTER ****/
 .footer h2 {
@@ -175,18 +174,6 @@ flex-container-4 > flex-item {
   width: 1920px;
   height: 1080px;
   position: absolute; }
-
-flex-container-4  > flex-item span {
-    transition: all 1s ease-in-out;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-
-flex-container-4  > flex-item span.selected {
-    color: #ffce42;
-}
-
 
 /* TRANSITIONS */
 #content.ng-enter, #content.ng-leave {
@@ -292,7 +279,6 @@ flex-container-1 {
   /* center flex items vertically */
   height: 1080px;
   width: 1920px;
-  border: 1px solid #777;
   background-color: black; }
 
 flex-container-1 > flex-item {

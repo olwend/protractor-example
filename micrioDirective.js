@@ -125,6 +125,7 @@ angular.module('myApp')
                 // If the clicked element isn't a marker, do nothing
                 if(e.target && e.target.marker ) {
 
+
                     /*  disable all markers */
 
                     e.stopPropagation();
@@ -147,7 +148,9 @@ angular.module('myApp')
 
                             var selected = marker.json.class;
 
-                            marker.open();
+                            ga('send', 'event', 'marker clicked', selected , '' );
+
+                        marker.open();
                             // Do anything custom here
                             console.info('Clicked a custom marker! The body text is: ', json.body);
                             // Example custom camera transition:

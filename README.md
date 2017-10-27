@@ -14,9 +14,9 @@ This is a Chrome app so test configuration uses directConnect for speed.
   chromeOptions: {
     args: ['allow-file-access-from-files']
     }
-    ```
-Ensure that properties on chrome include ```Chrome.app --args allow-file-access-from-files```
 
+Ensure that properties on chrome include  --args allow-file-access-from-files ```
+```
 ## Running tests
 
 Assuming you have installed webdriver-manager as per instructions above

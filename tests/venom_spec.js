@@ -15,8 +15,7 @@ describe('venom interactive App', function() {
 
 	});
 
-
-	it ('should go to landing when checked', function(callback){
+	it ('should go to landing when screensaver is clicked', function(callback){
 		element(by.id('content')).click();
 		expect($('.flex-item').isPresent()).toBeTruthy();
 		callback();
@@ -29,7 +28,6 @@ describe('venom interactive App', function() {
 		expect(element(by.css('h4')).getText()).toEqual('Images courtesy of Brooklyn Museum. Bequest of Theodora Wilbur from the collection of her father, Charles Edwin Wilbour, 47.218.85a-f/47.218.48a-f');
 	});
 
-// BLOCKED PENDING RENAMING OR IDs
 	it ('should go to Symptoms & Outcomes when box is mouse clicked', function(){
 		element(by.id('content')).click();
 		browser.driver.sleep(1000);
@@ -50,7 +48,7 @@ describe('venom interactive App', function() {
 		browser.driver.sleep(1000);
 		expect(element(by.css('h1')).getText()).toEqual('Brooklyn Papyrus');
 	});
-	// BLOCKED PENDING RENAMING OR IDs
+
 	// it ('should go to Symptoms & Outcomes when box is touched', function(){
 
 	// });
@@ -63,5 +61,12 @@ describe('venom interactive App', function() {
 	//
 	// });
 	//
+	// it ('should contain a micrio canvas')
+	// it ('should contain markers')
+	// it ('should contain a footer')
+	// it ('should have events xyz when marker clicked')
+	// it('should revert to screensaver after e.g. 6 secs')
+
+	// stress test - E2E random run through repeat of all these
 
 });

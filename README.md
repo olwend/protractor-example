@@ -15,7 +15,7 @@ This is a Chrome app so test configuration uses directConnect for speed.
     args: ['allow-file-access-from-files']
     }
 
-Ensure that properties on chrome include  --args allow-file-access-from-files ```
+Ensure that properties on chrome include  --args allow-file-access-from-files 
 ```
 ## Running tests
 
